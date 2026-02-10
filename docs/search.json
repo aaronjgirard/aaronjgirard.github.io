@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Notes: * indicates first author; † indicates student first author"
+  },
+  {
+    "objectID": "publications.html#journal-articles",
+    "href": "publications.html#journal-articles",
+    "title": "Publications",
+    "section": "Journal Articles",
+    "text": "Journal Articles\n\n†Pandey, A., J. Shragge, A.J. Girard, (2025) “First-order control factors for ocean-bottom ambient seismology interferometric observations,” Accepted in Geophysical Journal International.\n†Pandey, A., S. de Ridder, J. Shragge, A.J. Girard, (2025) “Ocean-bottom seismic interferometry in coupled acoustic-elastic media,” Geophysical Journal International, Volume 242, Issue 3.\n*Girard, A.J., J. Shragge, M. Danilouchkine, C. Udengaard, S. Gerritsen, (2024) “Observations from the Seafloor: Ultra-low-frequency Ambient Ocean-Bottom Nodal Seismology at the Amendment Field,” Geophysical Journal International, Volume 239, Issue 1, Pages 17–36. [EarthArXiv]\nShragge, J., A.J. Girard, C. Oren, R. Krahenbuhl (2024) “Elastic Time-Reverse Imaging of Backscattered Surface-Wave Data,” GEOPHYSICS 89: KS119-KS128.\nNakata, R., N. Nakata, A.J. Girard, D. Lumley, M. Ichikawa, A. Kato, Z. Xue, (2024) “Time-lapse velocity change estimation by anisotropic elastic full waveform inversion for CO₂ sequestration at the Nagaoka CCS site,” International Journal of Greenhouse Gas Control 136, 104176.\n†Chambers, D., G. Jin, A. Tourei, A.H. Saeed Issah, A. Lellouch, E. Martin, D. Zhu, A. Girard, S. Yuan, T. Cullison, T. Snyder, S. Kim, N. Danes, N. Punithan, M.S. Boltz, and M.M. Mendoza, (2024) “DASCore: a Python Library for Distributed Fiber Optic Sensing,” Seismica 3(2).\n†Yang, J., J. Shragge, A.J. Girard, E. Gonzalez, J. Ticona, A. Minaya and R. Krahenbuhl, (2023) “Seismic Characterization of a Recent Majes Landslide Complex,” Sustainability, 15, no. 18: 13574.\n†Pandey, A., J. Shragge, D. Chambers, and A. Girard, (2023) “Developing a Distributed Acoustic Sensing Seismic Land Streamer: Concept and Validation,” GEOPHYSICS, 88: WC59-WC67.\n*Girard, A.J., Shragge, J. and Olofsson, B., (2023) “Low-frequency ambient ocean-bottom node surface-wave seismology: A Gulf of Mexico case history,” GEOPHYSICS 88: B21-B32. [Kudos]\n*Girard, A.J. and Shragge, J. (2020) “Automated processing strategies for ambient seismic data,” Geophysical Prospecting, 68: 293-312.\n*Girard, A.J. and Shragge, J. (2020) “Direct migration of ambient seismic data,” Geophysical Prospecting, 68: 270-292.\n*Girard, A.J. (2019) “Automated processing and direct migration of ambient seismic data,” University of Western Australia, PhD Thesis."
+  },
+  {
+    "objectID": "publications.html#conference-abstracts",
+    "href": "publications.html#conference-abstracts",
+    "title": "Publications",
+    "section": "Conference Abstracts",
+    "text": "Conference Abstracts\n\n2025\n\nRoecker, S., N. Bennington, R. Denlinger, A. Flinders, A. Girard, M. Haney, R. Kramer, G. Lin, D. O’Connell, C. Ruggles and E. Vinarski (2025), “Refined images of the plumbing system beneath the Kīlauea Summit based on the analysis of active and passive seismic data in conjunction with gravity disturbance observations,” AGU Fall Meeting 2025.\nMartin, E.R., D. Chambers, G. Jin, A. Tourei, A.H. Issah, A. Lellouch, S. Yuan, A.J. Girard, D. Zhu, T. Cullison, N. Punithan, T. Snyder, S. Kim, N. Danes, S. Boltz, M. Mendoza, P. Li and Y. Song (2025), “Distributed Acoustic Sensing Data Analysis Ecosystem: DASCore and related Python packages,” AGU Fall Meeting 2025.\n†Pandey, A., J.C. Shragge and A.J. Girard (2025), “First-order Control Factors for Ocean-bottom Ambient Seismology Interferometric Observations,” IMAGE, SEG Annual Meeting, Houston, Texas.\n†Davis, D., J.C. Shragge, A.J. Girard and S. de Ridder (2025), “Ambient seismic frequency-domain gradiometry,” IMAGE, SEG Annual Meeting, Houston, Texas.\n†Pels, M., J.C. Shragge and A.J. Girard (2025), “3-D elastic time-reverse imaging of a void anomaly: A case history,” IMAGE, SEG Annual Meeting, Houston, Texas.\n\n\n\n2024\n\n*Girard, A.J., D. O’Connell, J. Shragge, and M.M. Haney (2024), “Active-source tomography velocity modelling of the Kīlauea summit and surrounding area,” AGU Fall Meeting 2024.\n†Tourei, A., D.J.A. Chambers, G. Jin, A.H. Issah, A. Lellouch, E. Martin, A.J. Girard, D. Zhu, S. Yuan, N. Punithan, T. Snyder, N. Danes, S. Boltz, and M. Mendoza (2024), “DASCore: An open-source Python library for distributed acoustic sensing,” AGU Fall Meeting 2024.\nNakata, R., N. Nakata, A.J. Girard, D.E. Lumley, M. Ichikawa, A. Kato, and Z. Xue (2024), “Time-lapse velocity change monitoring by anisotropic elastic full waveform inversion for CO₂ sequestration at the Nagaoka CCS site,” AGU Fall Meeting 2024.\n*Girard, A.J., J. Shragge, M. Danilouchkine, C. Udengaard, S. Gerritsen (2024), “(Ultra-)low frequency interferometric surface-wave scattering in ambient OBN seismic data,” IMAGE, SEG Annual Meeting, Houston, Texas.\n†Pandey, A., J. Shragge, and A.J. Girard (2024), “Ambient crosscorrelation modeling for dense ocean-bottom node arrays: a Gulf of Mexico example,” IMAGE, SEG Annual Meeting, Houston, Texas.\nJ. Shragge and A. Girard (2024), “Observations From the Seafloor: Ultra-Low-Frequency Ambient Ocean-Bottom Nodal Seismology From the Gulf of Mexico,” SSA 2024 Annual Meeting.\n†D. Chambers, G. Jin, A. Tourei, A.H.S. Issah, A. Lellouch, E. Martin, D. Zhu, A. Girard, S. Yuan, T. Cullison, T. Snyder, S. Kim, N. Danes, N. Punithan, S. Boltz, and M.M. Mendoza (2024), “DASCore: A python library for distributed acoustic sensing,” SSA 2024 Annual Meeting.\n\n\n\n2022\n\nNakata, R., N. Nakata, A. Girard, M. Ichikawa, A. Kato, D. Lumley and Z. Xue (2022), “Time-lapse crosswell seismic monitoring of CO₂ injection at the Nagaoka CCS site using elastic full waveform inversion,” SEG Technical Program Expanded Abstracts: 802-806.\n\n\n\n2021\n\n*Girard, A.J., J. Shragge, and B. Olofsson (2021), “Identifying salt flanks using low-frequency ambient OBN surface-wave seismology,” SEG Technical Program Expanded Abstracts: 1991-1995. Honorable Mention for Best Paper\n\n\n\n2017\n\n*Girard, A.J. and J. Shragge (2017), “Automated Processing Workflow for Ambient Seismic Recordings,” AGU Fall Meeting, New Orleans, LA.\n\n\n\n2016\n\n*Girard, A.J. and Shragge, J. (2016), “Extracting body waves from ambient seismic recordings,” SEG Technical Program Expanded Abstracts: 2715-2719.\n\n\n\n2015\n\n*Girard, A.J. and J. Shragge (2015), “The utility of extended images in ambient seismic wavefield migration,” AGU Fall Meeting, San Francisco, CA.\n\n\n\n2014\n\nElapavuluri, P.K., and Girard, A.J. (2014), “Estimating Seismic Uncertainity in Model Space,” 76th EAGE Conference and Exhibition, p.1-5.\n\n\n\n2010\n\n*Girard, A., and Vasconcelos, I. (2010), “Image‐domain time‐lapse inversion with extended images,” SEG Technical Program Expanded Abstracts: 4200-4204.\n*Girard, A., Jie-A-Looi, M., Bakker, J., and Momot, F. (2010), “Searching for a Roman Villa and Prehistoric Flint Mines in Kanton Zürich,” 1st Annual International Geoscience Student Conference, Bucharest, Romania."
+  },
+  {
+    "objectID": "publications.html#government-reports",
+    "href": "publications.html#government-reports",
+    "title": "Publications",
+    "section": "Government Reports",
+    "text": "Government Reports\n\nShragge, J., A. Girard, H. Flamme, B. Artman, R. Krahenbuhl, J. Bradford, A. Kumar, P. Reppert, R. Hammack, and D. Glaser (2023), “NETL Plastic Pipes Project – Final Report,” DOE/NETL-2023/4327; NETL Technical Report Series; U.S. Department of Energy, National Energy Technology Laboratory: Pittsburgh, PA.\nShragge, J., A. Girard, H. Flamme, B. Artman, R. Krahenbuhl, J. Bradford, Y. Li, P. Reppert, R. Hammack, and D. Glaser (2023), “NETL Plastic Pipes Project - June 2022 Progress Report,” United States."
+  },
+  {
+    "objectID": "publications.html#non-technical",
+    "href": "publications.html#non-technical",
+    "title": "Publications",
+    "section": "Non-Technical",
+    "text": "Non-Technical\n\nOre, T., E.R. Martin, I. Rubio-Cisneros, A. Girard, J. Ma, S. Kanakiya, O. Sanuade, A. Titov, and R. de Souza (2023), “Research Committee Update: Hot topics in geophysics: Progress, trends, and perspectives,” The Leading Edge 42: 360–363.\nTitov, A., Girard, A. and Martin, E. (2021), “Research Committee Update: Working with - and for - early-career researchers,” The Leading Edge 40: 464.\n*Girard, A. (2020), “Student Zone: Students encouraged to build new regional Challenge Bowls,” The Leading Edge 39: 600.\n*Girard, A. (2010), “Geophysics: Oh, the places a student can go! one student’s journey,” The Leading Edge 29: 604-605."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Aaron J Girard, PhD",
+    "section": "",
+    "text": "LinkedIn\n  \n  \n      ORCID\n  \n  \n      Google Scholar\n  \n\n  \n  \n\nCenter for Wave Phenomena\nGeophysics Department\nColorado School of Mines\nGolden, CO 80401-1877, USA\nEmail: agirard [at] mines.edu\n\n\nI am a researcher at the Center for Wave Phenomena in the Geophysics Department at Colorado School of Mines. My work spans seismic data processing and imaging, ambient/passive seismic monitoring, and high-performance computing applications in geophysics.\nI am actively involved in developing open-source tools for the geophysics community, including contributions to the DASCORE distributed fiber optic sensing library and Madagascar software for reproducible computational experiments.\n\n\n\n\n\n\n\n\n\n\n\n\n\nYear\nDegree\nUniversity\n\n\n\n\n2019\nPhD Geophysics\nUniversity of Western Australia\n\n\n2010\nMSc Applied Geophysics\nIDEA League (Technische Universiteit Delft, Eidgenössische Technische Hochschule Zürich, Rheinisch-Westfälische Technische Hochschule Aachen)\n\n\n2007\nBSc Geophysical Engineering\nColorado School of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYear\nPosition\nInstitute/Company\n\n\n\n\n2022–\nResearch Associate\nColorado School of Mines\n\n\n2019–2021\nPostdoctoral Researcher\nColorado School of Mines\n\n\n2020–2022\nGeophysical Consultant\nNawii LLC\n\n\n2019\nProcessing Geophysicist\nDown Under Geosolutions\n\n\n2013–2014\nCo-founder and CEO\nRARE Services, LLC.\n\n\n2010–2013\nGeophysicist\nWesternGeco\n\n\n2009–2010\nProcessing Geophysicist\nPGS\n\n\n2010\nGeophysics Intern\nIon GXT\n\n\n2008–2009\nGeophysics Intern\nHess Corporation\n\n\n2007\nGeophysics Intern\nNorsk Hydro, ASA\n\n\n2006–2007\nLaboratory Assistant\nColorado School of Mines - Rock Abuse Laboratory\n\n\n2006\nDoodlebugging Intern\nGlobal Geophysical Services\n\n\n\n\n\n\n\nSociety of Exploration Geophysicists\nEuropean Association of Geoscientists and Engineers"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Aaron J Girard, PhD",
+    "section": "",
+    "text": "I am a researcher at the Center for Wave Phenomena in the Geophysics Department at Colorado School of Mines. My work spans seismic data processing and imaging, ambient/passive seismic monitoring, and high-performance computing applications in geophysics.\nI am actively involved in developing open-source tools for the geophysics community, including contributions to the DASCORE distributed fiber optic sensing library and Madagascar software for reproducible computational experiments."
+  },
+  {
+    "objectID": "index.html#brief-vitae",
+    "href": "index.html#brief-vitae",
+    "title": "Aaron J Girard, PhD",
+    "section": "",
+    "text": "Year\nDegree\nUniversity\n\n\n\n\n2019\nPhD Geophysics\nUniversity of Western Australia\n\n\n2010\nMSc Applied Geophysics\nIDEA League (Technische Universiteit Delft, Eidgenössische Technische Hochschule Zürich, Rheinisch-Westfälische Technische Hochschule Aachen)\n\n\n2007\nBSc Geophysical Engineering\nColorado School of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYear\nPosition\nInstitute/Company\n\n\n\n\n2022–\nResearch Associate\nColorado School of Mines\n\n\n2019–2021\nPostdoctoral Researcher\nColorado School of Mines\n\n\n2020–2022\nGeophysical Consultant\nNawii LLC\n\n\n2019\nProcessing Geophysicist\nDown Under Geosolutions\n\n\n2013–2014\nCo-founder and CEO\nRARE Services, LLC.\n\n\n2010–2013\nGeophysicist\nWesternGeco\n\n\n2009–2010\nProcessing Geophysicist\nPGS\n\n\n2010\nGeophysics Intern\nIon GXT\n\n\n2008–2009\nGeophysics Intern\nHess Corporation\n\n\n2007\nGeophysics Intern\nNorsk Hydro, ASA\n\n\n2006–2007\nLaboratory Assistant\nColorado School of Mines - Rock Abuse Laboratory\n\n\n2006\nDoodlebugging Intern\nGlobal Geophysical Services\n\n\n\n\n\n\n\nSociety of Exploration Geophysicists\nEuropean Association of Geoscientists and Engineers"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "GPGN 436/536 — Geophysical Computing\nFall 2025\nAn introduction to computational methods in geophysics, covering programming fundamentals, numerical methods, and their applications to geophysical problems.\n\nGPGN 438 — Senior Design\nSpring 2021 – Spring 2026\nAdvisor of student projects in the senior design capstone course. Students work on real-world geophysical problems, applying skills learned throughout their undergraduate education.\n\n\n\nGPGN 314 — Applied Geophysics (Seismic Section)\nSpring 2020 – Spring 2022\nTaught the seismic methods portion of this introductory applied geophysics course, covering the principles and applications of seismic exploration."
+  },
+  {
+    "objectID": "teaching.html#courses-at-colorado-school-of-mines",
+    "href": "teaching.html#courses-at-colorado-school-of-mines",
+    "title": "Teaching",
+    "section": "",
+    "text": "GPGN 436/536 — Geophysical Computing\nFall 2025\nAn introduction to computational methods in geophysics, covering programming fundamentals, numerical methods, and their applications to geophysical problems.\n\nGPGN 438 — Senior Design\nSpring 2021 – Spring 2026\nAdvisor of student projects in the senior design capstone course. Students work on real-world geophysical problems, applying skills learned throughout their undergraduate education.\n\n\n\nGPGN 314 — Applied Geophysics (Seismic Section)\nSpring 2020 – Spring 2022\nTaught the seismic methods portion of this introductory applied geophysics course, covering the principles and applications of seismic exploration."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research focuses on advancing seismic methods for subsurface characterization, with particular emphasis on passive seismic techniques and computational geophysics.\n\n\n\nSeismic data processing and imaging — Developing new algorithms and workflows for processing seismic data\nAmbient/passive seismic monitoring — Extracting useful signals from ambient seismic noise for subsurface imaging\n\n\n\n\n\nAmbient low-frequency OBN velocity model building — Using ocean-bottom node data for building velocity models from ambient noise\nAmbient seismic imaging for mining and O&G resources — Applications of passive seismic methods for resource exploration\nMultiphysics exploration — Integrating multiple geophysical methods\nDAS exploration — Distributed Acoustic Sensing applications in geophysics\n\n\n\n\n\nHigh Performance Computing (HPC) resource management — Managing computational resources for large-scale geophysical computations\nGeneral Purpose GPU computing, CUDA — Leveraging GPU architectures for geophysical algorithms\nMadagascar software management — Contributing to reproducible computational geophysics\nDASCORE development team — Core developer of the Python library for distributed fiber optic sensing"
+  },
+  {
+    "objectID": "research.html#research-overview",
+    "href": "research.html#research-overview",
+    "title": "Research",
+    "section": "",
+    "text": "My research focuses on advancing seismic methods for subsurface characterization, with particular emphasis on passive seismic techniques and computational geophysics.\n\n\n\nSeismic data processing and imaging — Developing new algorithms and workflows for processing seismic data\nAmbient/passive seismic monitoring — Extracting useful signals from ambient seismic noise for subsurface imaging\n\n\n\n\n\nAmbient low-frequency OBN velocity model building — Using ocean-bottom node data for building velocity models from ambient noise\nAmbient seismic imaging for mining and O&G resources — Applications of passive seismic methods for resource exploration\nMultiphysics exploration — Integrating multiple geophysical methods\nDAS exploration — Distributed Acoustic Sensing applications in geophysics\n\n\n\n\n\nHigh Performance Computing (HPC) resource management — Managing computational resources for large-scale geophysical computations\nGeneral Purpose GPU computing, CUDA — Leveraging GPU architectures for geophysical algorithms\nMadagascar software management — Contributing to reproducible computational geophysics\nDASCORE development team — Core developer of the Python library for distributed fiber optic sensing"
+  },
+  {
+    "objectID": "research.html#current-projects",
+    "href": "research.html#current-projects",
+    "title": "Research",
+    "section": "Current Projects",
+    "text": "Current Projects\n\nUltra-Low-Frequency Ambient Ocean-Bottom Seismology\nInvestigating the potential of ultra-low-frequency signals recorded on ocean-bottom nodes for subsurface imaging and characterization. This work explores new frequency bands that have traditionally been underutilized in exploration seismology.\n\n\nKīlauea Summit Velocity Modeling\nActive-source tomography velocity modelling of the Kīlauea summit and surrounding area, contributing to our understanding of volcanic systems.\n\n\nCO₂ Sequestration Monitoring\nTime-lapse seismic monitoring using full waveform inversion for carbon capture and storage sites, helping to ensure safe and effective CO₂ sequestration."
+  },
+  {
+    "objectID": "gallery.html#section",
+    "href": "gallery.html#section",
+    "title": "Gallery",
+    "section": "",
+    "text": "Press Coverage\n\n\n\n\n\n\nNoteCNN Money: High Demand Jobs (2012)\n\n\n\nFeatured in CNN Money’s gallery on high-demand careers in geophysics.\nView archived article on Internet Archive"
+  }
+]

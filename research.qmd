@@ -1,0 +1,40 @@
+---
+title: "Research"
+---
+
+## Research Overview
+
+My research focuses on advancing seismic methods for subsurface characterization, with particular emphasis on passive seismic techniques and computational geophysics.
+
+### Basic Research
+
+- **Seismic data processing and imaging** — Developing new algorithms and workflows for processing seismic data
+- **Ambient/passive seismic monitoring** — Extracting useful signals from ambient seismic noise for subsurface imaging
+
+### Applied Research
+
+- **Ambient low-frequency OBN velocity model building** — Using ocean-bottom node data for building velocity models from ambient noise
+- **Ambient seismic imaging for mining and O&G resources** — Applications of passive seismic methods for resource exploration
+- **Multiphysics exploration** — Integrating multiple geophysical methods
+- **DAS exploration** — Distributed Acoustic Sensing applications in geophysics
+
+### Computing
+
+- **High Performance Computing (HPC) resource management** — Managing computational resources for large-scale geophysical computations
+- **General Purpose GPU computing, CUDA** — Leveraging GPU architectures for geophysical algorithms
+- **[Madagascar](https://www.reproducibility.org/) software management** — Contributing to reproducible computational geophysics
+- **[DASCORE](https://dascore.org/) development team** — Core developer of the Python library for distributed fiber optic sensing
+
+## Current Projects
+
+### Ultra-Low-Frequency Ambient Ocean-Bottom Seismology
+
+Investigating the potential of ultra-low-frequency signals recorded on ocean-bottom nodes for subsurface imaging and characterization. This work explores new frequency bands that have traditionally been underutilized in exploration seismology.
+
+### Kīlauea Summit Velocity Modeling
+
+Active-source tomography velocity modelling of the Kīlauea summit and surrounding area, contributing to our understanding of volcanic systems.
+
+### CO₂ Sequestration Monitoring
+
+Time-lapse seismic monitoring using full waveform inversion for carbon capture and storage sites, helping to ensure safe and effective CO₂ sequestration.

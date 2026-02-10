@@ -1,0 +1,45 @@
+/* Links styling */
+a {
+  color: #3498db;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+/* Publications page styling */
+.content h2 {
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.content h3 {
+  color: #2c3e50;
+  margin-top: 1.5rem;
+}
+
+/* Teaching page styling */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ecf0f1;
+  margin: 2rem 0;
+}
+
+/* Gallery callout styling */
+.callout-note {
+  border-left-color: #3498db;
+}
+
+/* About page links - make them look like buttons */
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Academic icons in links */
+.about-link-text .ai {
+  margin-right: 0.3rem;
+}

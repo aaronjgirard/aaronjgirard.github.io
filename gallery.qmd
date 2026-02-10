@@ -1,0 +1,30 @@
+---
+title: "Gallery"
+---
+
+## Media & Features
+
+### Video
+
+{{< video https://www.youtube.com/watch?v=N2MpTuN0rR8&t=2s >}}
+
+{{<video https://youtu.be/VOnVWaMlFP4 >}}
+---
+
+### Press Coverage
+
+::: {.callout-note}
+## CNN Money: High Demand Jobs (2012)
+
+Featured in CNN Money's gallery on high-demand careers in geophysics.
+
+[View archived article on Internet Archive](https://web.archive.org/web/20250620050404/https://money.cnn.com/galleries/2012/news/economy/1205/gallery.high-demand-jobs/4.html)
+:::
+
+::: {layout-ncol=2}
+<!-- Example layout for multiple photos
+![Field work](images/fieldwork.jpg)
+
+![Conference presentation](images/conference.jpg)
+-->
+:::

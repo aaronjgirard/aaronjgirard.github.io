@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Aaron J Girard"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: teaching.qmd
+        text: Teaching
+      - href: publications.qmd
+        text: Publications
+      - href: gallery.qmd
+        text: Gallery
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/
+        aria-label: LinkedIn
+      - icon: google
+        href: https://scholar.google.com/citations?user=ClMZy8wAAAAJ&hl=en&oi=ao
+        aria-label: Google Scholar
+
+format:
+  html:
+    theme: 
+      light: flatly
+    css: styles.css
+    toc: false

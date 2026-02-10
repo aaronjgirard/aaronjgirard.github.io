@@ -1,0 +1,72 @@
+---
+title: ""
+description-meta: "Aaron J Girard - Research Geophysicist at Colorado School of Mines"
+image: "images/profile.png"
+page-navigation: false
+toc: false
+page-layout: full
+
+about:
+  id: hero-heading
+  template: trestles
+  image-width: 70%
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/aarongirard/
+    - text: "{{< ai orcid >}} ORCID"
+      href: https://orcid.org/0000-0002-1455-2514
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=ClMZy8wAAAAJ&hl=en&oi=ao
+---
+
+:::{#hero-heading}
+
+# Aaron J Girard, PhD {.name-title}
+
+Center for Wave Phenomena  
+Geophysics Department  
+Colorado School of Mines  
+Golden, CO 80401-1877, USA  
+Email: agirard [at] mines.edu
+
+## About Me
+
+I am a researcher at the [Center for Wave Phenomena](https://cwp.mines.edu/) in the Geophysics Department at [Colorado School of Mines](https://www.mines.edu/). My work spans seismic data processing and imaging, ambient/passive seismic monitoring, and high-performance computing applications in geophysics.
+
+I am actively involved in developing open-source tools for the geophysics community, including contributions to the [DASCORE](https://dascore.org/) distributed fiber optic sensing library and [Madagascar](https://www.reproducibility.org/) software for reproducible computational experiments.
+
+
+## Brief Vitae
+
+### Education
+
+| Year | Degree | University |
+|------|--------|------------|
+| 2019 | PhD Geophysics | University of Western Australia |
+| 2010 | MSc Applied Geophysics | IDEA League (Technische Universiteit Delft, Eidgenössische Technische Hochschule Zürich, Rheinisch-Westfälische Technische Hochschule Aachen) |
+| 2007 | BSc Geophysical Engineering | Colorado School of Mines |
+
+### Employment
+
+| Year | Position | Institute/Company |
+|------|----------|-------------------|
+| 2022– | Research Associate | Colorado School of Mines |
+| 2019–2021 | Postdoctoral Researcher | Colorado School of Mines |
+| 2020–2022 | Geophysical Consultant | Nawii LLC |
+| 2019 | Processing Geophysicist | Down Under Geosolutions |
+| 2013–2014 | Co-founder and CEO | RARE Services, LLC. |
+| 2010–2013 | Geophysicist | WesternGeco |
+| 2009–2010 | Processing Geophysicist | PGS |
+| 2010 | Geophysics Intern | Ion GXT |
+| 2008–2009 | Geophysics Intern | Hess Corporation |
+| 2007 | Geophysics Intern | Norsk Hydro, ASA |
+| 2006–2007 | Laboratory Assistant | Colorado School of Mines - Rock Abuse Laboratory |
+| 2006 | Doodlebugging Intern | Global Geophysical Services |
+
+### Collaborating Organisations
+
+- [Society of Exploration Geophysicists](http://www.seg.org/)
+- [European Association of Geoscientists and Engineers](http://www.eage.org/)
+
+:::
