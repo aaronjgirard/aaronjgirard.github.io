@@ -10,7 +10,7 @@ toc-title: "Sections"
 
 ## Journal Articles {#journal-articles}
 
-- ^&dagger;^Pandey, A., J. Shragge, A.J. Girard, (2025) "[First-order control factors for ocean-bottom ambient seismology interferometric observations](https://doi.org/10.1093/gji/ggaf351)," *Accepted in Geophysical Journal International*.
+- ^&dagger;^Pandey, A., J. Shragge, A.J. Girard, (2025) "[First-order control factors for ocean-bottom ambient seismology interferometric observations](https://doi.org/10.1093/gji/ggaf351)," *Geophysical Journal International*, Volume 243, Issue 2.
 
 - ^&dagger;^Pandey, A., S. de Ridder, J. Shragge, A.J. Girard, (2025) "[Ocean-bottom seismic interferometry in coupled acoustic-elastic media](https://academic.oup.com/gji/article/242/3/ggaf271/8203306)," *Geophysical Journal International*, Volume 242, Issue 3.
 
