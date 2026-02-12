@@ -1,9 +1,9 @@
 project:
   type: website
   output-dir: docs
-  sitemap: true
 
 website:
+  sitemap: true
   title: "Aaron J Girard"
   navbar:
     left:
