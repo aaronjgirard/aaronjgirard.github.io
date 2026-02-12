@@ -3,8 +3,8 @@ project:
   output-dir: docs
 
 website:
-  sitemap: true
   title: "Aaron J Girard"
+  site-url: https://aaronjgirard.github.io
   navbar:
     left:
       - href: index.qmd
