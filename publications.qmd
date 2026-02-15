@@ -10,7 +10,7 @@ toc-title: "Sections"
 
 ## Journal Articles {#journal-articles}
 
-- ^&dagger;^Pandey, A., J. Shragge, **A.J. Girard**, A. Kumar, (2026) "[Scholte-wave Adjoint Tomography for Building Low-frequency, Offshore Shear-wave Velocity Models](https://eartharxiv.org/repository/view/11759/)," *Geophysics*, Earth ArXiv.
+- ^&dagger;^Pandey, A., J. Shragge, **A.J. Girard**, A. Kumar, (2026) "[Scholte-wave Adjoint Tomography for Building Low-frequency, Offshore Shear-wave Velocity Models](https://eartharxiv.org/repository/view/11759/)," *Geophysics*, in review. *Earth ArXiv*.
 
 - ^&dagger;^Pandey, A., J. Shragge, **A.J. Girard**, (2025) "[First-order control factors for ocean-bottom ambient seismology interferometric observations](https://doi.org/10.1093/gji/ggaf351)," *Geophysical Journal International*, Volume 243, Issue 2.
 
