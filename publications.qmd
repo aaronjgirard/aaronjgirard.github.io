@@ -16,7 +16,7 @@ toc-title: "Sections"
 
 - ^&dagger;^Pels, M., J. Shragge, **A.J. Girard**, (2026) "[3-D Elastic Time-Reverse Imaging of a Linear Void Anomaly](https://eartharxiv.org/repository/view/10849/)," *Geophysics*, in review. *Earth ArXiv*.
 
-- Kramer, R.L., R. Denlinger, **A.J. Girard**, D.H.R. O'Connell, G. Lin, S. Roecker, N. Bennington, A. Flinders, E. Vinarski, (2026) "A high-density, active and passive seismic imaging experiment at the summit of Kīlauea Volcano, Hawai'i," *Seismological Research Letters*, in review.
+- Kramer, R.L., R. Denlinger, **A.J. Girard**, D.R.H. O'Connell, G. Lin, S. Roecker, N. Bennington, A. Flinders, E. Vinarski, (2026) "A high-density, active and passive seismic imaging experiment at the summit of Kīlauea Volcano, Hawai'i," *Seismological Research Letters*, in review.
 
 - O'Connell, D.R.H., **A.J. Girard**, (2026) "2023 Kīlauea Horizontal-Component Signal/Noise Assessment of a Large Three-Component Nodal Array," *Seismica*, in review.
 
