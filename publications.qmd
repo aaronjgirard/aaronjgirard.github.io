@@ -48,6 +48,8 @@ toc-title: "Sections"
 
 ### 2026
 
+- ^&dagger;^Ding, Y., J. Shragge and **A.J. Girard** (2026), "[Ambient OBN Data Processing and Environmental-dependent Interferometric Analysis](files/ding_image2026.pdf)," *IMAGE, SEG Annual Meeting*, Houston, Texas.
+
 - ^&dagger;^Pels, M., J. Shragge and **A.J. Girard** (2026), "[3D Wave-Mode Separation for Elastic Time-Reverse Imaging](files/pels_image2026.pdf)," *IMAGE, SEG Annual Meeting*, Houston, Texas.
 
 ### 2025
