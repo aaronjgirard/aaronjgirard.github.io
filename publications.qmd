@@ -46,6 +46,10 @@ toc-title: "Sections"
 
 ## Conference Abstracts {#conference-abstracts}
 
+### 2026
+
+- ^&dagger;^Pels, M., J. Shragge and **A.J. Girard** (2026), "[3D Wave-Mode Separation for Elastic Time-Reverse Imaging](files/pels_image2026.pdf)," *IMAGE, SEG Annual Meeting*, Houston, Texas.
+
 ### 2025
 
 - Roecker, S., N. Bennington, R. Denlinger, A. Flinders, **A. Girard**, M. Haney, R. Kramer, G. Lin, D. O'Connell, C. Ruggles and E. Vinarski (2025), "[Refined images of the plumbing system beneath the Kīlauea Summit based on the analysis of active and passive seismic data in conjunction with gravity disturbance observations](https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1899392)," *AGU Fall Meeting 2025*.
