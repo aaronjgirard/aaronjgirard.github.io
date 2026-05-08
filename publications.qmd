@@ -10,7 +10,15 @@ toc-title: "Sections"
 
 ## Journal Articles {#journal-articles}
 
-- ^&dagger;^Pandey, A., J. Shragge, **A.J. Girard**, A. Kumar, (2026) "[Scholte-wave Adjoint Tomography for Building Low-frequency, Offshore Shear-wave Velocity Models](https://eartharxiv.org/repository/view/11759/)," *Geophysics*, in review. *Earth ArXiv*.
+- ^&dagger;^Davis, D., J. Shragge, S. de Ridder, **A.J. Girard**, A. Pandey, (2026) "[Interferometric frequency-domain gradiometry](https://doi.org/10.1093/gji/ggag146)," *Geophysical Journal International*, Volume 245, Issue 3.
+
+- ^&dagger;^Pandey, A., J. Shragge, A. Kumar, **A.J. Girard**, (2026) "[Scholte-wave Adjoint Tomography for Building Low-frequency, Offshore Shear-wave Velocity Models](https://eartharxiv.org/repository/view/11759/)," *Geophysics*, in review. *Earth ArXiv*.
+
+- ^&dagger;^Pels, M., J. Shragge, **A.J. Girard**, (2026) "[3-D Elastic Time-Reverse Imaging of a Linear Void Anomaly](https://eartharxiv.org/repository/view/10849/)," *Geophysics*, in review. *Earth ArXiv*.
+
+- Kramer, R.L., R. Denlinger, **A.J. Girard**, D.H.R. O'Connell, G. Lin, S. Roecker, N. Bennington, A. Flinders, E. Vinarski, (2026) "A high-density, active and passive seismic imaging experiment at the summit of Kīlauea Volcano, Hawai'i," *Seismological Research Letters*, in review.
+
+- O'Connell, D.R.H., **A.J. Girard**, (2026) "2023 Kīlauea Horizontal-Component Signal/Noise Assessment of a Large Three-Component Nodal Array," *Seismica*, in review.
 
 - ^&dagger;^Pandey, A., J. Shragge, **A.J. Girard**, (2025) "[First-order control factors for ocean-bottom ambient seismology interferometric observations](https://doi.org/10.1093/gji/ggaf351)," *Geophysical Journal International*, Volume 243, Issue 2.
 
@@ -44,11 +52,11 @@ toc-title: "Sections"
 
 - Martin, E.R., D. Chambers, G. Jin, A. Tourei, A.H. Issah, A. Lellouch, S. Yuan, **A.J. Girard**, D. Zhu, T. Cullison, N. Punithan, T. Snyder, S. Kim, N. Danes, S. Boltz, M. Mendoza, P. Li and Y. Song (2025), "[Distributed Acoustic Sensing Data Analysis Ecosystem: DASCore and related Python packages](https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1893955)," *AGU Fall Meeting 2025*.
 
-- ^&dagger;^Pandey, A., J.C. Shragge and **A.J. Girard** (2025), "[First-order Control Factors for Ocean-bottom Ambient Seismology Interferometric Observations](https://imageevent.aapg.org/portals/26/abstracts/2025/4303580.pdf)," *IMAGE, SEG Annual Meeting*, Houston, Texas.
+- ^&dagger;^Pandey, A., J.C. Shragge and **A.J. Girard** (2025), "[First-order Control Factors for Ocean-bottom Ambient Seismology Interferometric Observations](files/pandey_image2025.pdf)," *IMAGE, SEG Annual Meeting*, Houston, Texas.
 
-- ^&dagger;^Davis, D., J.C. Shragge, **A.J. Girard** and S. de Ridder (2025), "[Ambient seismic frequency-domain gradiometry](https://imageevent.aapg.org/portals/26/abstracts/2025/4316565.pdf)," *IMAGE, SEG Annual Meeting*, Houston, Texas.
+- ^&dagger;^Davis, D., J.C. Shragge, **A.J. Girard** and S. de Ridder (2025), "[Ambient seismic frequency-domain gradiometry](files/davis_image2025.pdf)," *IMAGE, SEG Annual Meeting*, Houston, Texas.
 
-- ^&dagger;^Pels, M., J.C. Shragge and **A.J. Girard** (2025), "[3-D elastic time-reverse imaging of a void anomaly: A case history](https://imageevent.aapg.org/portals/26/abstracts/2025/4310907.pdf)," *IMAGE, SEG Annual Meeting*, Houston, Texas.
+- ^&dagger;^Pels, M., J.C. Shragge and **A.J. Girard** (2025), "[3-D elastic time-reverse imaging of a void anomaly: A case history](files/pels_image2025.pdf)," *IMAGE, SEG Annual Meeting*, Houston, Texas.
 
 ### 2024
 
