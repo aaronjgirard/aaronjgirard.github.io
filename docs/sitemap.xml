@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aaronjgirard.github.io/publications.html</loc>
-    <lastmod>2026-05-15T21:00:14.142Z</lastmod>
+    <loc>https://aaronjgirard.github.io/collaborators.html</loc>
+    <lastmod>2026-05-17T05:50:09.759Z</lastmod>
   </url>
   <url>
-    <loc>https://aaronjgirard.github.io/index.html</loc>
+    <loc>https://aaronjgirard.github.io/gallery.html</loc>
+    <lastmod>2026-02-06T06:37:54.223Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aaronjgirard.github.io/research.html</loc>
     <lastmod>2026-02-06T06:37:54.224Z</lastmod>
   </url>
   <url>
@@ -13,11 +17,11 @@
     <lastmod>2026-02-15T03:03:55.824Z</lastmod>
   </url>
   <url>
-    <loc>https://aaronjgirard.github.io/research.html</loc>
-    <lastmod>2026-02-06T06:37:54.224Z</lastmod>
+    <loc>https://aaronjgirard.github.io/index.html</loc>
+    <lastmod>2026-05-17T05:39:18.695Z</lastmod>
   </url>
   <url>
-    <loc>https://aaronjgirard.github.io/gallery.html</loc>
-    <lastmod>2026-02-06T06:37:54.223Z</lastmod>
+    <loc>https://aaronjgirard.github.io/publications.html</loc>
+    <lastmod>2026-05-15T21:00:14.142Z</lastmod>
   </url>
 </urlset>

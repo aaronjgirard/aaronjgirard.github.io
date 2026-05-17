@@ -109,6 +109,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./collaborators.html"> 
+<span class="menu-text">Collaborators</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./gallery.html"> 
 <span class="menu-text">Gallery</span></a>
   </li>  
@@ -137,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content page-columns page-full column-page" id="quarto-document-content">
 
 
 
@@ -299,6 +303,830 @@ Email: agirard [at] mines.edu</p>
 </div></div>
 </div>
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+
+<div id="collab-home-host" class="collab-root collab-mini page-columns page-full" style="display:none">
+  <p class="collab-mini-caption">Where my coauthors are</p>
+  <div class="collab-grid page-columns page-full">
+    <div class="map-wrap">
+      <svg id="map"></svg>
+      <div id="tip"></div>
+    </div>
+    <aside class="panel" id="panel">
+      <div class="panel-default" id="panel-default">
+        <strong>Hover an institution</strong>
+        Each red dot marks somewhere I have a coauthor.
+        <div class="panel-stats" id="stats"></div>
+      </div>
+    </aside>
+  </div>
+  <a class="collab-mini-link" href="collaborators.html">View full collaborator map →</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+
+<script>
+/* ════════════════════════════════════════════════════════════════════
+   DATA — edit anything below to update the map.
+   ════════════════════════════════════════════════════════════════════ */
+
+const PUBS_PAGE = "https://aaronjgirard.github.io/publications.html";
+
+// ── INSTITUTIONS ────────────────────────────────────────────────────
+const INSTITUTIONS = {
+  csm:          { name: "Colorado School of Mines",                       city: "Golden, Colorado, USA",          lng: -105.2240, lat:  39.7510 },
+  niosh_smrd:   { name: "NIOSH Spokane Mining Research Division",         city: "Spokane, Washington, USA",       lng: -117.4260, lat:  47.6588 },
+  cu_boulder:   { name: "University of Colorado Boulder",                 city: "Boulder, Colorado, USA",         lng: -105.2659, lat:  40.0076 },
+  mit:          { name: "Massachusetts Institute of Technology",          city: "Cambridge, Massachusetts, USA",  lng:  -71.0942, lat:  42.3601 },
+  stanford:     { name: "Stanford University",                            city: "Stanford, California, USA",      lng: -122.1697, lat:  37.4275 },
+  lbnl:         { name: "Lawrence Berkeley National Laboratory",          city: "Berkeley, California, USA",      lng: -122.2541, lat:  37.8763 },
+  tau:          { name: "Tel Aviv University",                            city: "Tel Aviv, Israel",               lng:   34.8044, lat:  32.1133 },
+  shell:        { name: "Shell Global Solutions International",           city: "The Hague, Netherlands",         lng:    4.2854, lat:  52.0856 },
+  tgs:          { name: "TGS",                                            city: "Houston, Texas, USA",            lng:  -95.3698, lat:  29.7604 },
+  exxon:        { name: "ExxonMobil Upstream Research",                   city: "Spring, Texas, USA",             lng:  -95.4621, lat:  30.0689 },
+  bp_houston:   { name: "BP America",                                     city: "Houston, Texas, USA",            lng:  -95.4361, lat:  29.7373 },
+  fervo:        { name: "Fervo Energy",                                   city: "Houston, Texas, USA",            lng:  -95.4080, lat:  29.7820 },
+  usgs_avo:     { name: "USGS Alaska Volcano Observatory",                city: "Anchorage, Alaska, USA",         lng: -149.9003, lat:  61.2181 },
+  usgs_cvo:     { name: "USGS Cascades Volcano Observatory",              city: "Vancouver, Washington, USA",     lng: -122.6614, lat:  45.6324 },
+  usgs_hvo:     { name: "USGS Hawaiian Volcano Observatory",              city: "Hilo, Hawai\u02bbi, USA",        lng: -155.0913, lat:  19.7297 },
+  uw_madison:   { name: "University of Wisconsin\u2013Madison",           city: "Madison, Wisconsin, USA",        lng:  -89.4125, lat:  43.0766 },
+  rpi:          { name: "Rensselaer Polytechnic Institute",               city: "Troy, New York, USA",            lng:  -73.6824, lat:  42.7297 },
+  miami:        { name: "University of Miami (RSMAS)",                    city: "Miami, Florida, USA",            lng:  -80.1626, lat:  25.7322 },
+  ut_dallas:    { name: "University of Texas at Dallas",                  city: "Richardson, Texas, USA",         lng:  -96.7501, lat:  32.9858 },
+  leeds:        { name: "University of Leeds",                            city: "Leeds, United Kingdom",          lng:   -1.5550, lat:  53.8067 },
+  unsa:         { name: "Universidad Nacional de San Agust\u00edn",       city: "Arequipa, Peru",                 lng:  -71.5375, lat: -16.4090 },
+  rite:         { name: "RITE",                                           city: "Kyoto, Japan",                   lng:  135.8000, lat:  34.7167 },
+  jogmec:       { name: "JOGMEC",                                         city: "Tokyo, Japan",                   lng:  139.7506, lat:  35.6669 },
+  jgi:          { name: "JGI, Inc.",                                      city: "Tokyo, Japan",                   lng:  139.7340, lat:  35.7307 },
+  netl_pgh:     { name: "DOE NETL",                                       city: "Pittsburgh, Pennsylvania, USA",  lng:  -79.9959, lat:  40.4406 },
+  shearwater_nl: { name: "Shearwater GeoServices (NL)",                  city: "Amsterdam, Netherlands",         lng:    4.9041, lat:  52.3676 },
+  eth:           { name: "ETH Z\u00fcrich (IDEA League)",                city: "Z\u00fcrich, Switzerland",       lng:    8.5418, lat:  47.3769 },
+  denver_indep: { name: "Independent Consulting / USGS retired",          city: "Denver, Colorado, USA",          lng: -104.9903, lat:  39.7392 },
+  rare_calgary: { name: "RARE Services, Inc.",                            city: "Calgary, Alberta, Canada",       lng: -114.0719, lat:  51.0447 },
+  ou:           { name: "University of Oklahoma",                         city: "Norman, Oklahoma, USA",          lng:  -97.4395, lat:  35.2226 },
+  wvu:          { name: "West Virginia University",                       city: "Morgantown, West Virginia, USA", lng:  -79.9559, lat:  39.6336 },
+  monterrey:    { name: "PGS / T\u00e9otl Geociencias",                   city: "Monterrey, Mexico",              lng: -100.3161, lat:  25.6866 },
+  hamilton:     { name: "Hamilton College",                               city: "Clinton, New York, USA",         lng:  -75.3776, lat:  43.0481 },
+  australia:    { name: "Georaf Australia (independent)",                 city: "Australia",                      lng:  115.8575, lat: -31.9523 },
+};
+
+// nudges so overlapping dots don't stack
+const OFFSETS = {
+  cu_boulder:   { dx:  0, dy: -7 },
+  csm:          { dx:  0, dy:  7 },
+  denver_indep: { dx:  6, dy:  6 },
+  shell:        { dx: -3, dy:  0 },
+  shearwater_nl:{ dx:  4, dy:  0 },
+  eth:          { dx:  0, dy:  0 },
+  // Houston cluster — TGS, ExxonMobil, BP, Fervo all near each other
+  tgs:          { dx: -8, dy:  4 },
+  exxon:        { dx:  4, dy: -6 },
+  bp_houston:   { dx: -4, dy:  8 },
+  fervo:        { dx:  7, dy:  3 },
+  // Tokyo
+  jogmec:       { dx: -3, dy:  4 },
+  jgi:          { dx:  4, dy: -3 },
+  // California
+  lbnl:         { dx:  0, dy: -5 },
+  stanford:     { dx:  0, dy:  5 },
+};
+
+// ── PUBLICATIONS ───────────────────────────────────────────────────
+const PUBLICATIONS = {
+  davis2026:        { year: 2026, label: "Interferometric frequency-domain gradiometry (GJI)" },
+  pandey2026a:      { year: 2026, label: "Scholte-wave adjoint tomography (Geophysics, in review)" },
+  pels2026:         { year: 2026, label: "3-D elastic time-reverse imaging of a void anomaly (Geophysics, in review)" },
+  kramer2026:       { year: 2026, label: "Active/passive seismic imaging at K\u012blauea summit (SRL, in review)" },
+  oconnell2026:     { year: 2026, label: "2023 K\u012blauea horizontal-component S/N assessment (Seismica, in review)" },
+  pandey2025a:      { year: 2025, label: "First-order control factors for OBN ambient interferometry (GJI)" },
+  pandey2025b:      { year: 2025, label: "OBN seismic interferometry in coupled acoustic-elastic media (GJI)" },
+  girard2024:       { year: 2024, label: "Observations from the seafloor: Amendment field (GJI)" },
+  shragge2024:      { year: 2024, label: "Elastic time-reverse imaging of backscattered surface-wave data (Geophysics)" },
+  nakata2024j:      { year: 2024, label: "Time-lapse velocity change at Nagaoka CCS (IJGGC)" },
+  chambers2024:     { year: 2024, label: "DASCore: a Python library for DAS (Seismica)" },
+  yang2023:         { year: 2023, label: "Seismic characterization of the Majes landslide complex (Sustainability)" },
+  pandey2023:       { year: 2023, label: "Developing a DAS seismic land streamer (Geophysics)" },
+  girard2023:       { year: 2023, label: "Low-frequency ambient OBN surface-wave seismology, GoM (Geophysics)" },
+  girard2020a:      { year: 2020, label: "Automated processing strategies for ambient seismic data (Geophys. Prospect.)" },
+  girard2020b:      { year: 2020, label: "Direct migration of ambient seismic data (Geophys. Prospect.)" },
+  girard2019:       { year: 2019, label: "PhD Thesis, University of Western Australia" },
+  ding2026c:        { year: 2026, label: "Ambient OBN data processing (IMAGE/SEG)" },
+  pels2026c:        { year: 2026, label: "3-D wave-mode separation for elastic TRI (IMAGE/SEG)" },
+  roecker2025c:     { year: 2025, label: "Refined images of the K\u012blauea plumbing system (AGU)" },
+  martin2025c:      { year: 2025, label: "DAS data analysis ecosystem: DASCore (AGU)" },
+  pandey2025c:      { year: 2025, label: "First-order control factors, OBN ambient interferometry (IMAGE/SEG)" },
+  davis2025c:       { year: 2025, label: "Ambient seismic frequency-domain gradiometry (IMAGE/SEG)" },
+  pels2025c:        { year: 2025, label: "3-D elastic TRI of a void anomaly (IMAGE/SEG)" },
+  girard2024c1:     { year: 2024, label: "Active-source tomography velocity modelling, K\u012blauea (AGU)" },
+  tourei2024c:      { year: 2024, label: "DASCore (AGU)" },
+  nakata2024c:      { year: 2024, label: "Time-lapse velocity monitoring, Nagaoka CCS (AGU)" },
+  girard2024c2:     { year: 2024, label: "Ultra-low frequency interferometric surface-wave scattering (IMAGE/SEG)" },
+  pandey2024c:      { year: 2024, label: "Ambient crosscorrelation modeling for OBN, GoM (IMAGE/SEG)" },
+  shragge2024c:     { year: 2024, label: "Ultra-low-frequency ambient OBN, GoM (SSA)" },
+  chambers2024c:    { year: 2024, label: "DASCore: a Python library for DAS (SSA)" },
+  nakata2022c:      { year: 2022, label: "Time-lapse crosswell seismic monitoring, Nagaoka CCS (SEG)" },
+  girard2021c:      { year: 2021, label: "Identifying salt flanks using low-frequency ambient OBN (SEG)" },
+  girard2017c:      { year: 2017, label: "Automated processing workflow for ambient seismic (AGU)" },
+  girard2016c:      { year: 2016, label: "Extracting body waves from ambient seismic (SEG)" },
+  girard2015c:      { year: 2015, label: "Utility of extended images in ambient seismic migration (AGU)" },
+  elapavuluri2014:  { year: 2014, label: "Estimating seismic uncertainty in model space (EAGE)" },
+  girard2010a:      { year: 2010, label: "Image-domain time-lapse inversion with extended images (SEG)" },
+  girard2010b:      { year: 2010, label: "Roman villa and prehistoric flint mines, Kanton Z\u00fcrich (Bucharest)" },
+  netl2023final:    { year: 2023, label: "NETL Plastic Pipes Project \u2014 Final Report" },
+  netl2022prog:     { year: 2022, label: "NETL Plastic Pipes Project \u2014 June 2022 Progress Report" },
+  ore2023:          { year: 2023, label: "Hot topics in geophysics (TLE Research Committee Update)" },
+  titov2021:        { year: 2021, label: "Working with and for early-career researchers (TLE)" },
+  girard2020c:      { year: 2020, label: "Student Zone: regional Challenge Bowls (TLE)" },
+  girard2010c:      { year: 2010, label: "Geophysics: Oh, the places a student can go (TLE)" },
+};
+
+// ── COAUTHORS ──────────────────────────────────────────────────────
+const COAUTHORS = [
+  // ─── Colorado School of Mines ────────────────────────────────────
+  { name: "Jeffrey Shragge",            inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=7K97bzgAAAAJ",
+    papers: ["davis2026","pandey2026a","pels2026","pandey2025a","pandey2025b","girard2024","shragge2024","yang2023","pandey2023","girard2023","girard2020a","girard2020b",
+             "ding2026c","pels2026c","pandey2025c","davis2025c","pels2025c","girard2024c1","girard2024c2","pandey2024c","shragge2024c","girard2021c","girard2017c","girard2016c","girard2015c",
+             "netl2023final","netl2022prog"] },
+  { name: "Daniel Davis",               inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Daniel+Davis+Colorado+Mines+geophysics",
+    papers: ["davis2026","davis2025c"] },
+  { name: "Madeleine Pels",             inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Madeleine+Pels+Colorado+Mines+geophysics",
+    papers: ["pels2026","pels2026c","pels2025c"] },
+  { name: "Ashish Kumar",               inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Ashish+Kumar+Colorado+Mines+geophysics",
+    papers: ["pandey2026a","netl2023final"] },
+  { name: "Can Oren",                   inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Can+Oren+Colorado+Mines",
+    papers: ["shragge2024"] },
+  { name: "Richard Krahenbuhl",         inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=a1WRuQgAAAAJ&hl=en",
+    papers: ["shragge2024","yang2023","netl2023final","netl2022prog"] },
+  { name: "Ge Jin",                     inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=mailRaIAAAAJ&hl=en",
+    papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
+  { name: "Ahmad Tourei",               inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=ds33ncYAAAAJ&hl=en",
+    papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
+  { name: "Abdul Hafiz Saeed Issah",    inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Abdul+Hafiz+Saeed+Issah",
+    papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
+  { name: "Eileen R. Martin",           inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=GsLAKWEAAAAJ&hl=en",
+    papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c","ore2023","titov2021"] },
+  { name: "Donglin Zhu",                inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Donglin+Zhu+Colorado+Mines",
+    papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
+  { name: "Shihao Yuan",                inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Shihao+Yuan+Colorado+Mines",
+    papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
+  { name: "Tomas Snyder",               inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Tomas+Snyder+Colorado+Mines",
+    papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
+  { name: "Seunghoo Kim",               inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Seunghoo+Kim+Colorado+Mines",
+    papers: ["chambers2024","chambers2024c"] },
+  { name: "Nicholas Danes",             inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Nicholas+Danes+Colorado+Mines",
+    papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
+  { name: "Nikhil Punithan",            inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Nikhil+Punithan+Colorado+Mines",
+    papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
+  { name: "Yidan Ding",                 inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Yidan+Ding+Colorado+Mines+geophysics",
+    papers: ["ding2026c"] },
+  { name: "Jihyun Yang",                inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Jihyun+Yang+Colorado+Mines+geophysics",
+    papers: ["yang2023"] },
+  { name: "Hanna Flamme",               inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Hanna+Flamme+Colorado+Mines",
+    papers: ["netl2023final","netl2022prog"] },
+  { name: "John Bradford",              inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=2azTsioAAAAJ&hl=en",
+    papers: ["netl2023final","netl2022prog"] },
+  { name: "Yaoguo Li",                  inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=zrcbXDAAAAAJ&hl=en",
+    papers: ["netl2022prog"] },
+  { name: "Brad Artman",                inst: "csm",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Brad+Artman+passive+seismic+imaging",
+    papers: ["netl2023final","netl2022prog"] },
+
+  // ─── BP America, Houston (Adesh Pandey, currently) ───────────────
+  { name: "Adesh Pandey",               inst: "bp_houston",   confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=3R5QzDUAAAAJ&hl=en",
+    papers: ["davis2026","pandey2026a","pandey2025a","pandey2025b","pandey2023","pandey2025c","pandey2024c"] },
+
+  // ─── Fervo Energy, Houston (Alexei Titov, currently) ─────────────
+  { name: "Aleksei Titov",              inst: "fervo",        confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=arjadcUAAAAJ&hl=en",
+    papers: ["ore2023","titov2021"] },
+
+  // ─── NIOSH SMRD, Spokane ─────────────────────────────────────────
+  { name: "Derrick Chambers",           inst: "niosh_smrd",   confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=OBeNaFsAAAAJ&hl=en",
+    papers: ["chambers2024","pandey2023","tourei2024c","chambers2024c"] },
+  { name: "M. Shawn Boltz",             inst: "niosh_smrd",   confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Shawn+Boltz+NIOSH+seismology",
+    papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
+
+  // ─── CU Boulder ──────────────────────────────────────────────────
+  { name: "Manuel M. Mendoza",          inst: "cu_boulder",   confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Manuel+Mendoza+CIRES+Boulder+seismology",
+    papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
+
+  // ─── MIT ─────────────────────────────────────────────────────────
+  { name: "Norimitsu (Nori) Nakata",    inst: "mit",          confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=VsHf-U8AAAAJ",
+    papers: ["nakata2024j","nakata2024c","nakata2022c"] },
+
+  // ─── Stanford ────────────────────────────────────────────────────
+  { name: "Thomas Cullison",            inst: "stanford",     confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Thomas+Cullison+Stanford+geophysics",
+    papers: ["chambers2024","chambers2024c","martin2025c"] },
+
+  // ─── LBNL ────────────────────────────────────────────────────────
+  { name: "Rie Nakata",                 inst: "lbnl",         confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=yVCIpFkAAAAJ&hl=en",
+    papers: ["nakata2024j","nakata2024c","nakata2022c"] },
+
+  // ─── Tel Aviv University ─────────────────────────────────────────
+  { name: "Ariel Lellouch",             inst: "tau",          confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=JEF9QWQAAAAJ&hl=en",
+    papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
+
+  // ─── Shell, The Hague ────────────────────────────────────────────
+  { name: "Mark Danilouchkine",         inst: "shell",        confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Danilouchkine+Shell+seismic",
+    papers: ["girard2024","girard2024c2"] },
+  { name: "Sijmen Gerritsen",           inst: "shell",        confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Sijmen+Gerritsen+Shell+ocean+bottom+node",
+    papers: ["girard2024","girard2024c2"] },
+
+  // ─── TGS, Houston ────────────────────────────────────────────────
+  { name: "Carsten Udengaard",          inst: "tgs",          confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=1HecAlIAAAAJ&hl=en",
+    papers: ["girard2024","girard2024c2"] },
+
+  // ─── ExxonMobil Upstream Research, Houston ───────────────────────
+  { name: "Bjorn Olofsson",             inst: "exxon",        confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Bjorn+Olofsson+ExxonMobil+OBN+ambient+seismic",
+    papers: ["girard2023","girard2021c"] },
+
+  // ─── RARE Services, Inc., Calgary ────────────────────────────────
+  { name: "Pavan K. Elapavuluri",       inst: "rare_calgary", confirmed: true,
+    scholar: "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C6&q=Pavan+Elapavuluri+&btnG=",
+    papers: ["elapavuluri2014"] },
+
+  // ─── Independent / USGS-retired, Denver ──────────────────────────
+  { name: "Daniel R. H. O'Connell",     inst: "denver_indep", confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=O%27Connell+seismology+TetraTech+Denver+nodal",
+    papers: ["kramer2026","oconnell2026","roecker2025c","girard2024c1"] },
+
+  // ─── USGS AVO, Anchorage ─────────────────────────────────────────
+  { name: "Matthew M. Haney",           inst: "usgs_avo",     confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=YG7-Qq0AAAAJ",
+    papers: ["kramer2026","roecker2025c","girard2024c1"] },
+
+  // ─── USGS CVO, Vancouver WA (Kramer + Denlinger per Kīlauea paper) ─
+  { name: "Rebecca L. Kramer",          inst: "usgs_cvo",     confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Rebecca+Kramer+USGS+Cascades+seismology",
+    papers: ["kramer2026","roecker2025c"] },
+  { name: "Roger Denlinger",            inst: "usgs_cvo",     confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Roger+Denlinger+USGS+Cascades",
+    papers: ["kramer2026","roecker2025c"] },
+
+  // ─── USGS HVO, Hilo (Bennington + Flinders per Kīlauea paper) ────
+  { name: "Ninfa Bennington",           inst: "usgs_hvo",     confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Ninfa+Bennington+USGS+HVO",
+    papers: ["kramer2026","roecker2025c"] },
+  { name: "Ashton Flinders",            inst: "usgs_hvo",     confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=JJ5IangAAAAJ&hl=en",
+    papers: ["kramer2026","roecker2025c"] },
+
+  // ─── U Wisconsin–Madison ─────────────────────────────────────────
+  { name: "Claire Ruggles",             inst: "uw_madison",   confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Claire+Ruggles+Wisconsin+gravity+Kilauea",
+    papers: ["roecker2025c"] },
+
+  // ─── RPI, Troy NY ────────────────────────────────────────────────
+  { name: "Steven Roecker",             inst: "rpi",          confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=ff9Anl4AAAAJ&hl=en",
+    papers: ["kramer2026","roecker2025c"] },
+
+  // ─── U Miami / RSMAS (Lin + Vinarski per Kīlauea paper) ──────────
+  { name: "Guoqing Lin",                inst: "miami",        confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=gxM_oUAAAAAJ&hl=en",
+    papers: ["kramer2026","roecker2025c"] },
+  { name: "Elizabeth Vinarski",         inst: "miami",        confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Elizabeth+Vinarski+Miami+Kilauea",
+    papers: ["kramer2026","roecker2025c"] },
+
+  // ─── UT Dallas ───────────────────────────────────────────────────
+  { name: "David Lumley",               inst: "ut_dallas",    confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=4dnfITkAAAAJ&hl=en",
+    papers: ["nakata2024j","nakata2024c","nakata2022c"] },
+
+  // ─── U Leeds ─────────────────────────────────────────────────────
+  { name: "Sjoerd de Ridder",           inst: "leeds",        confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=bFpYugEAAAAJ&hl=en",
+    papers: ["davis2026","pandey2025b","davis2025c"] },
+
+  // ─── UNSA Arequipa, Peru ─────────────────────────────────────────
+  { name: "Edgard Gonzales",            inst: "unsa",         confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Edgard+Gonzales+UNSA+Arequipa+geophysics",
+    papers: ["yang2023"] },
+  { name: "Javier Ticona",              inst: "unsa",         confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Javier+Ticona+UNSA+Arequipa+geophysics",
+    papers: ["yang2023"] },
+  { name: "Armando Minaya",             inst: "unsa",         confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Armando+Minaya+UNSA+Arequipa+geophysics",
+    papers: ["yang2023"] },
+
+  // ─── RITE, Kyoto (Ziqiu Xue) ─────────────────────────────────────
+  { name: "Ziqiu Xue",                  inst: "rite",         confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Ziqiu+Xue+RITE+CCS",
+    papers: ["nakata2024j","nakata2024c","nakata2022c"] },
+
+  // ─── JOGMEC, Tokyo (Ayato Kato) ──────────────────────────────────
+  { name: "Ayato Kato",                 inst: "jogmec",       confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Ayato+Kato+JOGMEC+CCS+seismic",
+    papers: ["nakata2024j","nakata2024c","nakata2022c"] },
+
+  // ─── JGI, Inc., Tokyo (Masaru Ichikawa) ──────────────────────────
+  { name: "Masaru Ichikawa",            inst: "jgi",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Masaru+Ichikawa+JGI+Nagaoka+CCS",
+    papers: ["nakata2024j","nakata2024c","nakata2022c"] },
+
+  // ─── DOE NETL Pittsburgh ─────────────────────────────────────────
+  { name: "Philip Reppert",             inst: "netl_pgh",     confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Philip+Reppert+NETL+geophysics",
+    papers: ["netl2023final","netl2022prog"] },
+  { name: "Richard Hammack",            inst: "netl_pgh",     confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Richard+Hammack+NETL+geophysics",
+    papers: ["netl2023final","netl2022prog"] },
+  { name: "Dan Glaser",                 inst: "netl_pgh",     confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Dan+Glaser+NETL+geophysics",
+    papers: ["netl2023final","netl2022prog"] },
+
+  // ─── Shearwater GeoServices, Netherlands ─────────────────────────
+  { name: "Ivan Vasconcelos",           inst: "shearwater_nl", confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=39BNlXoAAAAJ&hl=en",
+    papers: ["girard2010a"] },
+
+  // ─── ETH Zürich (IDEA League MSc classmates, 2010) ───────────────
+  { name: "Mitch Jie-A-Looi",           inst: "eth",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Mitch+Jie-A-Looi+geophysics+ETH",
+    papers: ["girard2010b"] },
+  { name: "Jenekke Bakker",             inst: "eth",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Jenekke+Bakker+geophysics+IDEA+League+ETH",
+    papers: ["girard2010b"] },
+  { name: "Fabien Momot",               inst: "eth",          confirmed: true,
+    scholar: "https://scholar.google.com/scholar?q=Fabien+Momot+geophysics+IDEA+League",
+    papers: ["girard2010b"] },
+
+  // ─── U Oklahoma ──────────────────────────────────────────────────
+  { name: "Oluseun Sanuade",            inst: "ou",           confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=MMXa1JIAAAAJ&hl=en",
+    papers: ["ore2023"] },
+  { name: "Joseph H. Ma",               inst: "ou",           confirmed: true,
+    scholar: "https://www.linkedin.com/in/josephhyma/",
+    papers: ["ore2023"] },
+
+  // ─── West Virginia University ────────────────────────────────────
+  { name: "Tobi M. Ore",                inst: "wvu",          confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=BpCPvcIAAAAJ&hl=en",
+    papers: ["ore2023"] },
+
+  // ─── PGS / Téotl Geociencias, Monterrey Mexico ───────────────────
+  { name: "Igor I. Rubio-Cisneros",     inst: "monterrey",    confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=l1cx65YAAAAJ&hl=en",
+    papers: ["ore2023"] },
+
+  // ─── Hamilton College ────────────────────────────────────────────
+  { name: "Shreya Kanakiya",            inst: "hamilton",     confirmed: true,
+    scholar: "https://scholar.google.com/citations?user=3ANkYSwAAAAJ&hl=en",
+    papers: ["ore2023"] },
+
+  // ─── Georaf Australia (independent) ──────────────────────────────
+  { name: "Rafael Medeiros de Souza",   inst: "australia",    confirmed: true,
+    scholar: "https://www.linkedin.com/in/rafael-medeiros-de-souza/",
+    papers: ["ore2023"] },
+];
+
+/*
+ * ════════════════════════════════════════════════════════════════════
+ * ALL NAMES AND AFFILIATIONS CONFIRMED.
+ *
+ * Last updated 2026-05-15 with corrections from Aaron:
+ *   - Jenekke Bakker, Mitch Jie-A-Looi, Fabien Momot  (ETH classmates)
+ *   - Sijmen Gerritsen  (Shell)
+ *   - Hanna Flamme      (single N)
+ *   - Carsten Udengaard (with verified scholar URL)
+ *   - Bjorn Olofsson    (no umlaut)
+ *   - Oluseun Sanuade   (with verified scholar URL)
+ *   - Shawn Boltz       (kept as-is; M is just his initial)
+ * ════════════════════════════════════════════════════════════════════
+ */
+
+/* ════════════════════════════════════════════════════════════════════
+   RENDERING — generally no need to edit below.
+   ════════════════════════════════════════════════════════════════════ */
+
+const byInst = {};
+COAUTHORS.forEach(a => {
+  a.count = a.papers.length;
+  if (!byInst[a.inst]) byInst[a.inst] = [];
+  byInst[a.inst].push(a);
+});
+
+function lastName(name) {
+  const parts = name.replace(/[()]/g, '').trim().split(/\s+/);
+  return parts[parts.length - 1].toLowerCase();
+}
+Object.values(byInst).forEach(list => {
+  list.sort((a, b) => {
+    if (b.count !== a.count) return b.count - a.count;
+    return lastName(a.name).localeCompare(lastName(b.name));
+  });
+});
+
+const W = 960, H = 480;
+// Set viewBox + preserveAspectRatio + width/height via the DOM API so that
+// Pandoc's HTML-attribute lowercasing cannot mangle the SVG-specific case.
+const svg = d3.select("#map")
+  .attr("viewBox", "0 0 " + W + " " + H)
+  .attr("preserveAspectRatio", "xMidYMid meet")
+  .style("width", "100%")
+  .style("height", "auto")
+  .style("display", "block");
+const projection = d3.geoNaturalEarth1().scale(180).translate([W/2, H/2 + 10]);
+const path = d3.geoPath(projection);
+
+svg.append("path").datum({type:"Sphere"}).attr("class","sphere").attr("d", path);
+svg.append("path")
+  .datum(d3.geoGraticule().step([20, 20])())
+  .attr("class", "graticule")
+  .attr("d", path);
+
+d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
+  .then(world => {
+    svg.append("g")
+      .selectAll("path")
+      .data(topojson.feature(world, world.objects.countries).features)
+      .join("path")
+        .attr("class", "country")
+        .attr("d", path);
+    drawDots();
+    setupStats();
+  })
+  .catch(err => { console.error(err); drawDots(); setupStats(); });
+
+function drawDots() {
+  const tip = document.getElementById("tip");
+  const wrap = document.querySelector(".map-wrap");
+
+  const data = Object.keys(byInst)
+    .filter(id => INSTITUTIONS[id])
+    .map(id => {
+      const inst = INSTITUTIONS[id];
+      const off = OFFSETS[id] || { dx: 0, dy: 0 };
+      const p = projection([inst.lng, inst.lat]);
+      return { id, inst, x: p[0] + off.dx, y: p[1] + off.dy, authors: byInst[id] };
+    });
+
+  // Default panel state: CSM (sorted so Jeff Shragge sits at the top).
+  // Shown on initial load and whenever the cursor leaves a dot.
+  const defaultDot = data.find(d => d.id === "csm");
+  let resetPending = null;
+  function showDefault() {
+    if (defaultDot) renderPanel(defaultDot);
+    resetPending = null;
+  }
+
+  // ── Cluster detection by visual (pixel) overlap ──
+  // Two dots cluster if their screen positions are within CLUSTER_PX of
+  // each other, regardless of true geographic distance. This catches
+  // visually-overlapping pairs like WVU–NETL (90 km apart in reality but
+  // ~2 px apart on a world map) and MIT–RPI (~5 px). The threshold is
+  // tight enough that geographically-distinct regions (e.g., NE US vs.
+  // Pacific NW vs. Midwest) don't accidentally chain into a megacluster.
+  const CLUSTER_PX  = 14;
+  const SPREAD_BASE = 24;
+
+  const parent = data.map((_, i) => i);
+  const find = i => { while (parent[i] !== i) { parent[i] = parent[parent[i]]; i = parent[i]; } return i; };
+  const union = (i, j) => { const a = find(i), b = find(j); if (a !== b) parent[a] = b; };
+  for (let i = 0; i < data.length; i++) {
+    for (let j = i + 1; j < data.length; j++) {
+      const dx = data[i].x - data[j].x;
+      const dy = data[i].y - data[j].y;
+      if (Math.sqrt(dx*dx + dy*dy) < CLUSTER_PX) union(i, j);
+    }
+  }
+
+  const clusterMap = {};
+  data.forEach((d, i) => {
+    const root = find(i);
+    d.clusterId = root;
+    if (!clusterMap[root]) clusterMap[root] = { id: root, dots: [] };
+    clusterMap[root].dots.push(d);
+  });
+  const clusterList = Object.values(clusterMap);
+
+  clusterList.forEach(cluster => {
+    if (cluster.dots.length < 2) {
+      cluster.dots.forEach(d => { d.spreadX = d.x; d.spreadY = d.y; });
+      cluster.multi = false;
+      return;
+    }
+    cluster.multi = true;
+    const n = cluster.dots.length;
+    // Spread radius sized so satellites (n-1 of them) have ≥22 px arc spacing.
+    const numSats = n - 1;
+    const minSpread = numSats > 1 ? 22 / (2 * Math.sin(Math.PI / numSats)) : 22;
+    const spreadR = Math.max(SPREAD_BASE, minSpread);
+    const cx = cluster.dots.reduce((s, d) => s + d.x, 0) / n;
+    const cy = cluster.dots.reduce((s, d) => s + d.y, 0) / n;
+
+    // Anchor = dot whose home is closest to the cluster centroid. It stays
+    // put on spread, marking the cluster's original location; the other dots
+    // become satellites orbiting it.
+    let anchorIdx = 0, minDistToC = Infinity;
+    cluster.dots.forEach((d, i) => {
+      const dx = d.x - cx, dy = d.y - cy;
+      const dist = dx*dx + dy*dy;
+      if (dist < minDistToC) { minDistToC = dist; anchorIdx = i; }
+    });
+    const anchor = cluster.dots[anchorIdx];
+    cluster.anchorId = anchor.id;
+    anchor.spreadX = anchor.x;
+    anchor.spreadY = anchor.y;
+
+    // Satellites: compute each one's natural angle from the anchor (so dots
+    // that were south of anchor land south, north stay north, etc.), then
+    // sort by that angle and redistribute evenly so multiple dots with
+    // similar natural angles don't pile up.
+    const sats = cluster.dots
+      .map((d, i) => ({ d, i }))
+      .filter(s => s.i !== anchorIdx)
+      .map(s => {
+        const vx = s.d.x - anchor.x, vy = s.d.y - anchor.y;
+        const mag = Math.sqrt(vx*vx + vy*vy);
+        const naturalAngle = mag < 0.5
+          ? -Math.PI/2 + s.i * 0.01     // tiny disambiguator
+          : Math.atan2(vy, vx);
+        return { d: s.d, naturalAngle };
+      })
+      .sort((a, b) => a.naturalAngle - b.naturalAngle);
+
+    // Start ring at the first satellite's natural angle, then step evenly
+    // around. Preserves relative spatial order without piling up.
+    const startA = sats.length ? sats[0].naturalAngle : 0;
+    const step = 2 * Math.PI / Math.max(1, sats.length);
+    sats.forEach((s, k) => {
+      const a = startA + k * step;
+      s.d.spreadX = anchor.x + Math.cos(a) * spreadR;
+      s.d.spreadY = anchor.y + Math.sin(a) * spreadR;
+    });
+  });
+
+  // ── Push spread positions away from non-cluster dots ──
+  // A spread dot must not land on top of another institution's marker.
+  // After the radial layout above, iterate: for each spread position, if
+  // it's closer than OBSTACLE_SEP to any home position outside its own
+  // cluster, push it directly away. A few passes converges; some clusters
+  // (Texas+OK near Monterrey, Northeast US near anything south of it) might
+  // need this, most won't.
+  const OBSTACLE_SEP    = 20;
+  const OBSTACLE_SEP_SQ = OBSTACLE_SEP * OBSTACLE_SEP;
+  clusterList.forEach(cluster => {
+    if (!cluster.multi) return;
+    const obstacles = [];
+    for (const c2 of clusterList) {
+      if (c2 === cluster) continue;
+      for (const d of c2.dots) obstacles.push(d);
+    }
+    if (obstacles.length === 0) return;
+    for (let iter = 0; iter < 6; iter++) {
+      let moved = false;
+      cluster.dots.forEach(d => {
+        // Anchors stay put. Detect by spread === home (also catches singletons,
+        // though those are filtered out above by `cluster.multi`).
+        if (d.spreadX === d.x && d.spreadY === d.y) return;
+        for (const o of obstacles) {
+          const dx = d.spreadX - o.x, dy = d.spreadY - o.y;
+          const distSq = dx*dx + dy*dy;
+          if (distSq < OBSTACLE_SEP_SQ && distSq > 0.01) {
+            const dist = Math.sqrt(distSq);
+            const push = OBSTACLE_SEP - dist + 0.5;
+            d.spreadX += (dx / dist) * push;
+            d.spreadY += (dy / dist) * push;
+            moved = true;
+          }
+        }
+      });
+      if (!moved) break;
+    }
+  });
+
+  const g = svg.append("g").attr("class", "dots");
+
+  // Leader lines (one per dot in a multi-dot cluster), in absolute world coords.
+  // Drawn BEFORE the dot groups so dots render on top.
+  const linesData = data.filter(d => clusterMap[d.clusterId].multi);
+  g.selectAll("line.leader")
+    .data(linesData)
+    .join("line")
+      .attr("class", "leader")
+      .attr("data-cluster-id", d => d.clusterId)
+      .attr("x1", d => d.x).attr("y1", d => d.y)
+      .attr("x2", d => d.x).attr("y2", d => d.y);
+
+  // Dot groups — flat, no cluster wrapper. NO invisible hitbox rects that
+  // could intercept clicks for nearby non-clustered dots.
+  const insts = g.selectAll("g.inst")
+    .data(data)
+    .join("g")
+      .attr("class", "inst")
+      .attr("data-id", d => d.id)
+      .attr("data-cluster-id", d => d.clusterId)
+      .attr("transform", d => `translate(${d.x},${d.y})`);
+
+  insts.append("circle").attr("class", "dot-halo").attr("r", 13);
+  insts.append("circle").attr("class", "dot").attr("r", 5);
+
+  function spread(cluster) {
+    if (!cluster.multi) return;
+    g.selectAll(`g.inst[data-cluster-id="${cluster.id}"]`)
+      .interrupt()
+      .transition().duration(180).ease(d3.easeCubicOut)
+      .attr("transform", d => `translate(${d.spreadX},${d.spreadY})`);
+    g.selectAll(`line.leader[data-cluster-id="${cluster.id}"]`)
+      .interrupt()
+      .transition().duration(180).ease(d3.easeCubicOut)
+      .attr("x2", d => d.spreadX).attr("y2", d => d.spreadY)
+      .style("opacity", 0.7);
+  }
+  function collapse(cluster) {
+    if (!cluster.multi) return;
+    g.selectAll(`g.inst[data-cluster-id="${cluster.id}"]`)
+      .interrupt()
+      .transition().duration(220).ease(d3.easeCubicOut)
+      .attr("transform", d => `translate(${d.x},${d.y})`);
+    g.selectAll(`line.leader[data-cluster-id="${cluster.id}"]`)
+      .interrupt()
+      .transition().duration(180).ease(d3.easeCubicOut)
+      .attr("x2", d => d.x).attr("y2", d => d.y)
+      .style("opacity", 0);
+  }
+
+  // ── Mouse-proximity cluster spread/collapse ──
+  // The cluster activates when the cursor is within TRIGGER_PX of any of its
+  // dots — checked against both home and spread positions, so once a cluster
+  // is open the user can drift toward the exploded dots without losing it.
+  // Per-dot proximity (not a bounding box) means non-clustered dots that
+  // happen to sit in the same map region aren't dragged into the activation.
+  const TRIGGER_PX  = 22;
+  const TRIGGER_SQ  = TRIGGER_PX * TRIGGER_PX;
+  let spreadActive = null;
+  svg.on("mousemove.cluster", function(event) {
+    const [cx, cy] = d3.pointer(event, svg.node());
+    let nearestCluster = null;
+    let nearestDist = TRIGGER_SQ;  // only dots within trigger range qualify
+    for (const c of clusterList) {
+      if (!c.multi) continue;
+      for (const d of c.dots) {
+        // home position
+        let dx = d.x - cx, dy = d.y - cy;
+        let dist = dx*dx + dy*dy;
+        if (dist < nearestDist) { nearestDist = dist; nearestCluster = c; }
+        // spread position (matters once the cluster is already open)
+        dx = d.spreadX - cx; dy = d.spreadY - cy;
+        dist = dx*dx + dy*dy;
+        if (dist < nearestDist) { nearestDist = dist; nearestCluster = c; }
+      }
+    }
+    if (nearestCluster !== spreadActive) {
+      if (spreadActive) collapse(spreadActive);
+      if (nearestCluster) spread(nearestCluster);
+      spreadActive = nearestCluster;
+    }
+  });
+  svg.on("mouseleave.cluster", function() {
+    if (spreadActive) { collapse(spreadActive); spreadActive = null; }
+  });
+
+  // Per-dot hover for tooltip + side panel
+  insts
+    .on("mouseenter", function(event, d) {
+      if (resetPending) { clearTimeout(resetPending); resetPending = null; }
+      svg.selectAll("g.inst").classed("active", false);
+      d3.select(this).classed("active", true);
+      const wrapRect = wrap.getBoundingClientRect();
+      tip.style.left = (event.clientX - wrapRect.left) + "px";
+      tip.style.top  = (event.clientY - wrapRect.top)  + "px";
+      tip.textContent = d.inst.name;
+      tip.classList.add("show");
+      renderPanel(d);
+    })
+    .on("mousemove", function(event) {
+      const wrapRect = wrap.getBoundingClientRect();
+      tip.style.left = (event.clientX - wrapRect.left) + "px";
+      tip.style.top  = (event.clientY - wrapRect.top)  + "px";
+    })
+    .on("mouseleave", function() {
+      tip.classList.remove("show");
+      svg.selectAll("g.inst").classed("active", false);
+      resetPending = setTimeout(showDefault, 80);
+    });
+
+  // Initial state: render the default (CSM) panel.
+  showDefault();
+}
+
+function setupStats() {
+  const nInst    = Object.keys(byInst).filter(id => INSTITUTIONS[id]).length;
+  const nAuthors = COAUTHORS.length;
+  const nPapers  = Object.keys(PUBLICATIONS).length;
+  const el = document.getElementById("stats");
+  if (el) {
+    el.innerHTML =
+      `<div><span class="n">${pad(nInst)}</span> &nbsp;institutions</div>` +
+      `<div><span class="n">${pad(nAuthors)}</span> &nbsp;coauthors</div>` +
+      `<div><span class="n">${pad(nPapers)}</span> &nbsp;publications</div>`;
+  }
+}
+
+function pad(n) { return String(n).padStart(2, "0"); }
+
+function renderPanel(d) {
+  const panel = document.getElementById("panel");
+  const inst = d.inst;
+  let html = "";
+  html += `<p class="panel-kicker">Institution</p>`;
+  html += `<h2 class="panel-inst">${esc(inst.name)}</h2>`;
+  html += `<p class="panel-city">${esc(inst.city)}</p>`;
+  html += `<hr class="panel-rule">`;
+  html += `<p class="panel-kicker">${d.authors.length} coauthor${d.authors.length === 1 ? "" : "s"} &middot; sorted by joint papers</p>`;
+
+  d.authors.forEach(a => {
+    html += `<div class="author">`;
+    html += `<p class="author-name"><a href="${esc(a.scholar)}" target="_blank" rel="noopener">${esc(a.name)} &nearr;</a></p>`;
+    html += `<p class="author-aff">${esc(inst.name)}${a.confirmed ? "" : " (inferred)"}</p>`;
+    html += `<p class="author-count">${a.count} joint paper${a.count === 1 ? "" : "s"}</p>`;
+    html += `<ul class="author-papers">`;
+    const sortedPapers = [...a.papers].sort((x, y) => {
+      return (PUBLICATIONS[y]?.year || 0) - (PUBLICATIONS[x]?.year || 0);
+    });
+    sortedPapers.forEach(pid => {
+      const p = PUBLICATIONS[pid];
+      if (!p) return;
+      html += `<li><span class="year">${p.year}</span><a href="${PUBS_PAGE}" target="_top">${esc(p.label)}</a></li>`;
+    });
+    html += `</ul>`;
+    html += `</div>`;
+  });
+
+  panel.innerHTML = html;
+}
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
+}
+
+// Mini-map enhancement: clicking any dot navigates to publications.html.
+// Uses event delegation so it works after dots are drawn asynchronously.
+document.addEventListener("click", function(ev) {
+  if (ev.target && ev.target.closest && ev.target.closest(".collab-mini g.inst")) {
+    window.location.href = "publications.html";
+  }
+});
+</script>
+
+<script>
+// Move the collaborator mini-map into the trestles left column so it
+// renders under the photo + ORCID/Scholar/LinkedIn links.
+(function() {
+  function place() {
+    var host   = document.getElementById("collab-home-host");
+    var target = document.querySelector(".about-entity");
+    if (host && target) {
+      host.classList.remove("page-columns", "page-full");
+      target.appendChild(host);
+      host.style.display = "";
+    }
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", place);
+  } else {
+    place();
+  }
+})();
+</script>
 
 
 

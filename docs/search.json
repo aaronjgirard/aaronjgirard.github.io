@@ -1,5 +1,75 @@
 [
   {
+    "objectID": "collaborators.html",
+    "href": "collaborators.html",
+    "title": "Collaborators & Coauthors",
+    "section": "",
+    "text": "Hover an institution\n        Each red dot marks somewhere I've had a coauthor. Move your\n        mouse over one to see the people, their roles, and the papers\n        we shared.\n        \n      \n    \n  \n  Map data © Natural Earth via world-atlas."
+  },
+  {
+    "objectID": "gallery.html#section",
+    "href": "gallery.html#section",
+    "title": "Gallery",
+    "section": "",
+    "text": "Press Coverage\n\n\n\n\n\n\nNoteCNN Money: High Demand Jobs (2012)\n\n\n\nFeatured in CNN Money’s gallery on high-demand careers in geophysics.\nView archived article on Internet Archive"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research focuses on advancing seismic methods for subsurface characterization, with particular emphasis on passive seismic techniques and computational geophysics.\n\n\n\nSeismic data processing and imaging — Developing new algorithms and workflows for processing seismic data\nAmbient/passive seismic monitoring — Extracting useful signals from ambient seismic noise for subsurface imaging\n\n\n\n\n\nAmbient low-frequency OBN velocity model building — Using ocean-bottom node data for building velocity models from ambient noise\nAmbient seismic imaging for mining and O&G resources — Applications of passive seismic methods for resource exploration\nMultiphysics exploration — Integrating multiple geophysical methods\nDAS exploration — Distributed Acoustic Sensing applications in geophysics\n\n\n\n\n\nHigh Performance Computing (HPC) resource management — Managing computational resources for large-scale geophysical computations\nGeneral Purpose GPU computing, CUDA — Leveraging GPU architectures for geophysical algorithms\nMadagascar software management — Contributing to reproducible computational geophysics\nDASCORE development team — Core developer of the Python library for distributed fiber optic sensing"
+  },
+  {
+    "objectID": "research.html#research-overview",
+    "href": "research.html#research-overview",
+    "title": "Research",
+    "section": "",
+    "text": "My research focuses on advancing seismic methods for subsurface characterization, with particular emphasis on passive seismic techniques and computational geophysics.\n\n\n\nSeismic data processing and imaging — Developing new algorithms and workflows for processing seismic data\nAmbient/passive seismic monitoring — Extracting useful signals from ambient seismic noise for subsurface imaging\n\n\n\n\n\nAmbient low-frequency OBN velocity model building — Using ocean-bottom node data for building velocity models from ambient noise\nAmbient seismic imaging for mining and O&G resources — Applications of passive seismic methods for resource exploration\nMultiphysics exploration — Integrating multiple geophysical methods\nDAS exploration — Distributed Acoustic Sensing applications in geophysics\n\n\n\n\n\nHigh Performance Computing (HPC) resource management — Managing computational resources for large-scale geophysical computations\nGeneral Purpose GPU computing, CUDA — Leveraging GPU architectures for geophysical algorithms\nMadagascar software management — Contributing to reproducible computational geophysics\nDASCORE development team — Core developer of the Python library for distributed fiber optic sensing"
+  },
+  {
+    "objectID": "research.html#current-projects",
+    "href": "research.html#current-projects",
+    "title": "Research",
+    "section": "Current Projects",
+    "text": "Current Projects\n\nUltra-Low-Frequency Ambient Ocean-Bottom Seismology\nInvestigating the potential of ultra-low-frequency signals recorded on ocean-bottom nodes for subsurface imaging and characterization. This work explores new frequency bands that have traditionally been underutilized in exploration seismology.\n\n\nKīlauea Summit Velocity Modeling\nActive-source tomography velocity modelling of the Kīlauea summit and surrounding area, contributing to our understanding of volcanic systems.\n\n\nCO₂ Sequestration Monitoring\nTime-lapse seismic monitoring using full waveform inversion for carbon capture and storage sites, helping to ensure safe and effective CO₂ sequestration."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "GPGN 436/536 — Geophysical Computing\nFall 2025\nAn introduction to computational methods in geophysics, covering programming fundamentals, numerical methods, and their applications to geophysical problems.\nGPGN 438 — Senior Design\nSpring 2021 – Spring 2026\nAdvisor of student projects in the senior design capstone course. Students work on real-world geophysical problems, applying skills learned throughout their undergraduate education.\n\n\n\nGPGN 314 — Applied Geophysics (Seismic Section)\nSpring 2020 – Spring 2022\nTaught the seismic methods portion of this introductory applied geophysics course, covering the principles and applications of seismic exploration."
+  },
+  {
+    "objectID": "teaching.html#courses-at-colorado-school-of-mines",
+    "href": "teaching.html#courses-at-colorado-school-of-mines",
+    "title": "Teaching",
+    "section": "",
+    "text": "GPGN 436/536 — Geophysical Computing\nFall 2025\nAn introduction to computational methods in geophysics, covering programming fundamentals, numerical methods, and their applications to geophysical problems.\nGPGN 438 — Senior Design\nSpring 2021 – Spring 2026\nAdvisor of student projects in the senior design capstone course. Students work on real-world geophysical problems, applying skills learned throughout their undergraduate education.\n\n\n\nGPGN 314 — Applied Geophysics (Seismic Section)\nSpring 2020 – Spring 2022\nTaught the seismic methods portion of this introductory applied geophysics course, covering the principles and applications of seismic exploration."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Aaron J Girard, PhD",
+    "section": "",
+    "text": "LinkedIn\n  \n  \n      ORCID\n  \n  \n      Google Scholar\n  \n\n  \n  \n\nCenter for Wave Phenomena\nGeophysics Department\nColorado School of Mines\nGolden, CO 80401-1877, USA\nEmail: agirard [at] mines.edu\n\n\nI am a researcher at the Center for Wave Phenomena in the Geophysics Department at Colorado School of Mines. My work spans seismic data processing and imaging, ambient/passive seismic monitoring, and high-performance computing applications in geophysics.\nI am actively involved in developing open-source tools for the geophysics community, including contributions to the DASCORE distributed fiber optic sensing library and Madagascar software for reproducible computational experiments.\n\n\n\n\n\n\n\n\n\n\n\n\n\nYear\nDegree\nUniversity\n\n\n\n\n2019\nPhD Geophysics\nUniversity of Western Australia\n\n\n2010\nMSc Applied Geophysics\nIDEA League (Technische Universiteit Delft, Eidgenössische Technische Hochschule Zürich, Rheinisch-Westfälische Technische Hochschule Aachen)\n\n\n2007\nBSc Geophysical Engineering\nColorado School of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYear\nPosition\nInstitute/Company\n\n\n\n\n2022–\nResearch Associate\nColorado School of Mines\n\n\n2019–2021\nPostdoctoral Researcher\nColorado School of Mines\n\n\n2020–2022\nGeophysical Consultant\nNawii LLC\n\n\n2019\nProcessing Geophysicist\nDown Under Geosolutions\n\n\n2013–2014\nCo-founder and CEO\nRARE Services, LLC.\n\n\n2010–2013\nGeophysicist\nWesternGeco\n\n\n2009–2010\nProcessing Geophysicist\nPGS\n\n\n2010\nGeophysics Intern\nIon GXT\n\n\n2008–2009\nGeophysics Intern\nHess Corporation\n\n\n2007\nGeophysics Intern\nNorsk Hydro, ASA\n\n\n2006–2007\nLaboratory Assistant\nColorado School of Mines - Rock Abuse Laboratory\n\n\n2006\nDoodlebugging Intern\nGlobal Geophysical Services\n\n\n\n\n\n\n\nSociety of Exploration Geophysicists\nEuropean Association of Geoscientists and Engineers"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Aaron J Girard, PhD",
+    "section": "",
+    "text": "I am a researcher at the Center for Wave Phenomena in the Geophysics Department at Colorado School of Mines. My work spans seismic data processing and imaging, ambient/passive seismic monitoring, and high-performance computing applications in geophysics.\nI am actively involved in developing open-source tools for the geophysics community, including contributions to the DASCORE distributed fiber optic sensing library and Madagascar software for reproducible computational experiments."
+  },
+  {
+    "objectID": "index.html#brief-vitae",
+    "href": "index.html#brief-vitae",
+    "title": "Aaron J Girard, PhD",
+    "section": "",
+    "text": "Year\nDegree\nUniversity\n\n\n\n\n2019\nPhD Geophysics\nUniversity of Western Australia\n\n\n2010\nMSc Applied Geophysics\nIDEA League (Technische Universiteit Delft, Eidgenössische Technische Hochschule Zürich, Rheinisch-Westfälische Technische Hochschule Aachen)\n\n\n2007\nBSc Geophysical Engineering\nColorado School of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYear\nPosition\nInstitute/Company\n\n\n\n\n2022–\nResearch Associate\nColorado School of Mines\n\n\n2019–2021\nPostdoctoral Researcher\nColorado School of Mines\n\n\n2020–2022\nGeophysical Consultant\nNawii LLC\n\n\n2019\nProcessing Geophysicist\nDown Under Geosolutions\n\n\n2013–2014\nCo-founder and CEO\nRARE Services, LLC.\n\n\n2010–2013\nGeophysicist\nWesternGeco\n\n\n2009–2010\nProcessing Geophysicist\nPGS\n\n\n2010\nGeophysics Intern\nIon GXT\n\n\n2008–2009\nGeophysics Intern\nHess Corporation\n\n\n2007\nGeophysics Intern\nNorsk Hydro, ASA\n\n\n2006–2007\nLaboratory Assistant\nColorado School of Mines - Rock Abuse Laboratory\n\n\n2006\nDoodlebugging Intern\nGlobal Geophysical Services\n\n\n\n\n\n\n\nSociety of Exploration Geophysicists\nEuropean Association of Geoscientists and Engineers"
+  },
+  {
     "objectID": "publications.html",
     "href": "publications.html",
     "title": "Publications",
@@ -33,68 +103,5 @@
     "title": "Publications",
     "section": "Non-Technical",
     "text": "Non-Technical\n\nOre, T., E.R. Martin, I. Rubio-Cisneros, A. Girard, J. Ma, S. Kanakiya, O. Sanuade, A. Titov, and R. de Souza (2023), “Research Committee Update: Hot topics in geophysics: Progress, trends, and perspectives,” The Leading Edge 42: 360–363.\nTitov, A., Girard, A. and Martin, E. (2021), “Research Committee Update: Working with - and for - early-career researchers,” The Leading Edge 40: 464.\n*Girard, A. (2020), “Student Zone: Students encouraged to build new regional Challenge Bowls,” The Leading Edge 39: 600.\n*Girard, A. (2010), “Geophysics: Oh, the places a student can go! one student’s journey,” The Leading Edge 29: 604-605."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Aaron J Girard, PhD",
-    "section": "",
-    "text": "LinkedIn\n  \n  \n      ORCID\n  \n  \n      Google Scholar\n  \n\n  \n  \n\nCenter for Wave Phenomena\nGeophysics Department\nColorado School of Mines\nGolden, CO 80401-1877, USA\nEmail: agirard [at] mines.edu\n\n\nI am a researcher at the Center for Wave Phenomena in the Geophysics Department at Colorado School of Mines. My work spans seismic data processing and imaging, ambient/passive seismic monitoring, and high-performance computing applications in geophysics.\nI am actively involved in developing open-source tools for the geophysics community, including contributions to the DASCORE distributed fiber optic sensing library and Madagascar software for reproducible computational experiments.\n\n\n\n\n\n\n\n\n\n\n\n\n\nYear\nDegree\nUniversity\n\n\n\n\n2019\nPhD Geophysics\nUniversity of Western Australia\n\n\n2010\nMSc Applied Geophysics\nIDEA League (Technische Universiteit Delft, Eidgenössische Technische Hochschule Zürich, Rheinisch-Westfälische Technische Hochschule Aachen)\n\n\n2007\nBSc Geophysical Engineering\nColorado School of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYear\nPosition\nInstitute/Company\n\n\n\n\n2022–\nResearch Associate\nColorado School of Mines\n\n\n2019–2021\nPostdoctoral Researcher\nColorado School of Mines\n\n\n2020–2022\nGeophysical Consultant\nNawii LLC\n\n\n2019\nProcessing Geophysicist\nDown Under Geosolutions\n\n\n2013–2014\nCo-founder and CEO\nRARE Services, LLC.\n\n\n2010–2013\nGeophysicist\nWesternGeco\n\n\n2009–2010\nProcessing Geophysicist\nPGS\n\n\n2010\nGeophysics Intern\nIon GXT\n\n\n2008–2009\nGeophysics Intern\nHess Corporation\n\n\n2007\nGeophysics Intern\nNorsk Hydro, ASA\n\n\n2006–2007\nLaboratory Assistant\nColorado School of Mines - Rock Abuse Laboratory\n\n\n2006\nDoodlebugging Intern\nGlobal Geophysical Services\n\n\n\n\n\n\n\nSociety of Exploration Geophysicists\nEuropean Association of Geoscientists and Engineers"
-  },
-  {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
-    "title": "Aaron J Girard, PhD",
-    "section": "",
-    "text": "I am a researcher at the Center for Wave Phenomena in the Geophysics Department at Colorado School of Mines. My work spans seismic data processing and imaging, ambient/passive seismic monitoring, and high-performance computing applications in geophysics.\nI am actively involved in developing open-source tools for the geophysics community, including contributions to the DASCORE distributed fiber optic sensing library and Madagascar software for reproducible computational experiments."
-  },
-  {
-    "objectID": "index.html#brief-vitae",
-    "href": "index.html#brief-vitae",
-    "title": "Aaron J Girard, PhD",
-    "section": "",
-    "text": "Year\nDegree\nUniversity\n\n\n\n\n2019\nPhD Geophysics\nUniversity of Western Australia\n\n\n2010\nMSc Applied Geophysics\nIDEA League (Technische Universiteit Delft, Eidgenössische Technische Hochschule Zürich, Rheinisch-Westfälische Technische Hochschule Aachen)\n\n\n2007\nBSc Geophysical Engineering\nColorado School of Mines\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYear\nPosition\nInstitute/Company\n\n\n\n\n2022–\nResearch Associate\nColorado School of Mines\n\n\n2019–2021\nPostdoctoral Researcher\nColorado School of Mines\n\n\n2020–2022\nGeophysical Consultant\nNawii LLC\n\n\n2019\nProcessing Geophysicist\nDown Under Geosolutions\n\n\n2013–2014\nCo-founder and CEO\nRARE Services, LLC.\n\n\n2010–2013\nGeophysicist\nWesternGeco\n\n\n2009–2010\nProcessing Geophysicist\nPGS\n\n\n2010\nGeophysics Intern\nIon GXT\n\n\n2008–2009\nGeophysics Intern\nHess Corporation\n\n\n2007\nGeophysics Intern\nNorsk Hydro, ASA\n\n\n2006–2007\nLaboratory Assistant\nColorado School of Mines - Rock Abuse Laboratory\n\n\n2006\nDoodlebugging Intern\nGlobal Geophysical Services\n\n\n\n\n\n\n\nSociety of Exploration Geophysicists\nEuropean Association of Geoscientists and Engineers"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "GPGN 436/536 — Geophysical Computing\nFall 2025\nAn introduction to computational methods in geophysics, covering programming fundamentals, numerical methods, and their applications to geophysical problems.\nGPGN 438 — Senior Design\nSpring 2021 – Spring 2026\nAdvisor of student projects in the senior design capstone course. Students work on real-world geophysical problems, applying skills learned throughout their undergraduate education.\n\n\n\nGPGN 314 — Applied Geophysics (Seismic Section)\nSpring 2020 – Spring 2022\nTaught the seismic methods portion of this introductory applied geophysics course, covering the principles and applications of seismic exploration."
-  },
-  {
-    "objectID": "teaching.html#courses-at-colorado-school-of-mines",
-    "href": "teaching.html#courses-at-colorado-school-of-mines",
-    "title": "Teaching",
-    "section": "",
-    "text": "GPGN 436/536 — Geophysical Computing\nFall 2025\nAn introduction to computational methods in geophysics, covering programming fundamentals, numerical methods, and their applications to geophysical problems.\nGPGN 438 — Senior Design\nSpring 2021 – Spring 2026\nAdvisor of student projects in the senior design capstone course. Students work on real-world geophysical problems, applying skills learned throughout their undergraduate education.\n\n\n\nGPGN 314 — Applied Geophysics (Seismic Section)\nSpring 2020 – Spring 2022\nTaught the seismic methods portion of this introductory applied geophysics course, covering the principles and applications of seismic exploration."
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
-    "section": "",
-    "text": "My research focuses on advancing seismic methods for subsurface characterization, with particular emphasis on passive seismic techniques and computational geophysics.\n\n\n\nSeismic data processing and imaging — Developing new algorithms and workflows for processing seismic data\nAmbient/passive seismic monitoring — Extracting useful signals from ambient seismic noise for subsurface imaging\n\n\n\n\n\nAmbient low-frequency OBN velocity model building — Using ocean-bottom node data for building velocity models from ambient noise\nAmbient seismic imaging for mining and O&G resources — Applications of passive seismic methods for resource exploration\nMultiphysics exploration — Integrating multiple geophysical methods\nDAS exploration — Distributed Acoustic Sensing applications in geophysics\n\n\n\n\n\nHigh Performance Computing (HPC) resource management — Managing computational resources for large-scale geophysical computations\nGeneral Purpose GPU computing, CUDA — Leveraging GPU architectures for geophysical algorithms\nMadagascar software management — Contributing to reproducible computational geophysics\nDASCORE development team — Core developer of the Python library for distributed fiber optic sensing"
-  },
-  {
-    "objectID": "research.html#research-overview",
-    "href": "research.html#research-overview",
-    "title": "Research",
-    "section": "",
-    "text": "My research focuses on advancing seismic methods for subsurface characterization, with particular emphasis on passive seismic techniques and computational geophysics.\n\n\n\nSeismic data processing and imaging — Developing new algorithms and workflows for processing seismic data\nAmbient/passive seismic monitoring — Extracting useful signals from ambient seismic noise for subsurface imaging\n\n\n\n\n\nAmbient low-frequency OBN velocity model building — Using ocean-bottom node data for building velocity models from ambient noise\nAmbient seismic imaging for mining and O&G resources — Applications of passive seismic methods for resource exploration\nMultiphysics exploration — Integrating multiple geophysical methods\nDAS exploration — Distributed Acoustic Sensing applications in geophysics\n\n\n\n\n\nHigh Performance Computing (HPC) resource management — Managing computational resources for large-scale geophysical computations\nGeneral Purpose GPU computing, CUDA — Leveraging GPU architectures for geophysical algorithms\nMadagascar software management — Contributing to reproducible computational geophysics\nDASCORE development team — Core developer of the Python library for distributed fiber optic sensing"
-  },
-  {
-    "objectID": "research.html#current-projects",
-    "href": "research.html#current-projects",
-    "title": "Research",
-    "section": "Current Projects",
-    "text": "Current Projects\n\nUltra-Low-Frequency Ambient Ocean-Bottom Seismology\nInvestigating the potential of ultra-low-frequency signals recorded on ocean-bottom nodes for subsurface imaging and characterization. This work explores new frequency bands that have traditionally been underutilized in exploration seismology.\n\n\nKīlauea Summit Velocity Modeling\nActive-source tomography velocity modelling of the Kīlauea summit and surrounding area, contributing to our understanding of volcanic systems.\n\n\nCO₂ Sequestration Monitoring\nTime-lapse seismic monitoring using full waveform inversion for carbon capture and storage sites, helping to ensure safe and effective CO₂ sequestration."
-  },
-  {
-    "objectID": "gallery.html#section",
-    "href": "gallery.html#section",
-    "title": "Gallery",
-    "section": "",
-    "text": "Press Coverage\n\n\n\n\n\n\nNoteCNN Money: High Demand Jobs (2012)\n\n\n\nFeatured in CNN Money’s gallery on high-demand careers in geophysics.\nView archived article on Internet Archive"
   }
 ]

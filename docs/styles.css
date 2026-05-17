@@ -43,3 +43,240 @@ hr {
 .about-link-text .ai {
   margin-right: 0.3rem;
 }
+/* ──────────────────────────────────────────────────────────────────
+   Collaborator map — scoped fragment (homepage mini + dedicated page)
+   All selectors are prefixed with .collab-root so the map's typography,
+   colors, and CSS variables stay inside the fragment and do not leak
+   into the rest of the page.
+   ────────────────────────────────────────────────────────────────── */
+.collab-root {
+  --paper:      #f6f1e6;
+  --paper-2:    #efe7d4;
+  --land:       #e0d7be;
+  --land-edge:  #b9aa83;
+  --graticule:  rgba(108, 92, 56, 0.10);
+  --ink:        #1f1a10;
+  --ink-soft:   #6c5c38;
+  --ink-faint:  #8a7a52;
+  --accent:     #8a2520;
+  --accent-2:   #c44a40;
+  --accent-dim: rgba(138, 37, 32, 0.20);
+  --rule:       #c9bea0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  border: 1px solid var(--land-edge);
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 20px;
+}
+.collab-root, .collab-root * { box-sizing: border-box; }
+.collab-root a { color: inherit; }
+
+.collab-root,
+.collab-root.page-columns,
+.collab-root.page-full {
+  display: block !important;
+  grid-template-columns: none !important;
+}
+.collab-root .collab-grid,
+.collab-root .collab-grid.page-columns,
+.collab-root .collab-grid.page-full {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 340px !important;
+  grid-column-gap: 28px !important;
+  gap: 28px !important;
+  align-items: start !important;
+}
+.collab-root .collab-grid > .map-wrap {
+  min-width: 0 !important;
+  width: 100% !important;
+  grid-column: 1 / 2 !important;
+}
+.collab-root .collab-grid > aside.panel {
+  min-width: 0 !important;
+  width: 340px !important;
+  grid-column: 2 / 3 !important;
+}
+@media (max-width: 880px) {
+  .collab-root .collab-grid,
+  .collab-root .collab-grid.page-columns,
+  .collab-root .collab-grid.page-full { grid-template-columns: 1fr !important; }
+  .collab-root .collab-grid > .map-wrap,
+  .collab-root .collab-grid > aside.panel { width: 100% !important; grid-column: auto !important; }
+}
+
+.collab-root .map-wrap {
+  position: relative;
+  background:
+    radial-gradient(circle at 28% 18%, rgba(255,255,255,0.55), transparent 55%),
+    var(--paper-2);
+  border: 1px solid var(--land-edge);
+  box-shadow: inset 0 0 0 5px var(--paper-2), inset 0 0 0 6px var(--land-edge);
+  padding: 18px;
+}
+.collab-root svg#map { width: 100%; height: auto; display: block; }
+.collab-root .country { fill: var(--land); stroke: var(--land-edge); stroke-width: 0.4; stroke-linejoin: round; }
+.collab-root .graticule { fill: none; stroke: var(--graticule); stroke-width: 0.4; }
+.collab-root .sphere { fill: none; stroke: var(--land-edge); stroke-width: 0.7; }
+.collab-root .dot-halo { fill: var(--accent-dim); opacity: 0; transition: opacity 0.2s ease; pointer-events: none; }
+.collab-root .cluster-hit { fill: transparent; pointer-events: all; }
+.collab-root .leader {
+  stroke: var(--accent);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-dasharray: 2.5 2.5;
+  opacity: 0;
+  pointer-events: none;
+}
+.collab-root .dot {
+  fill: var(--accent); stroke: var(--paper); stroke-width: 1.2;
+  cursor: pointer; transition: r 0.18s ease, fill 0.18s ease;
+}
+.collab-root g.inst.active .dot,
+.collab-root g.inst:hover .dot { fill: var(--accent-2); r: 7; }
+.collab-root g.inst.active .dot-halo,
+.collab-root g.inst:hover .dot-halo { opacity: 1; }
+
+.collab-root aside.panel {
+  position: sticky; top: 24px;
+  background: var(--paper);
+  border: 1px solid var(--land-edge);
+  box-shadow: inset 0 0 0 5px var(--paper-2), inset 0 0 0 6px var(--land-edge);
+  padding: 26px 24px;
+  min-height: 480px;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+@media (max-width: 880px) {
+  .collab-root aside.panel { position: static; max-height: none; }
+}
+.collab-root aside.panel::-webkit-scrollbar { width: 6px; }
+.collab-root aside.panel::-webkit-scrollbar-thumb { background: var(--land-edge); border-radius: 3px; }
+
+.collab-root .panel-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.20em;
+  text-transform: uppercase; color: var(--ink-faint);
+  margin: 0 0 8px;
+}
+.collab-root .panel-inst { font-size: 24px; font-weight: 600; margin: 0 0 4px; line-height: 1.15; }
+.collab-root .panel-city { font-style: italic; color: var(--ink-soft); margin: 0 0 18px; font-size: 16px; }
+.collab-root .panel-rule { border: 0; border-top: 1px solid var(--rule); margin: 0 0 18px; }
+
+.collab-root .author {
+  margin-bottom: 18px; padding-bottom: 14px;
+  border-bottom: 1px dashed var(--rule);
+}
+.collab-root .author:last-child { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
+.collab-root .author-name { font-size: 18px; font-weight: 600; margin: 0 0 2px; }
+.collab-root .author-name a {
+  color: var(--ink); text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 0.15s, color 0.15s;
+}
+.collab-root .author-name a:hover { border-bottom-color: var(--accent); color: var(--accent); }
+.collab-root .author-aff { font-style: italic; color: var(--ink-soft); font-size: 13.5px; margin: 0 0 6px; }
+.collab-root .author-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.14em;
+  color: var(--ink-faint); text-transform: uppercase; margin: 0 0 6px;
+}
+.collab-root .author-papers { list-style: none; padding: 0; margin: 4px 0 0; font-size: 14px; }
+.collab-root .author-papers li { margin: 3px 0; line-height: 1.4; }
+.collab-root .author-papers a {
+  color: var(--ink-soft); text-decoration: none;
+  border-bottom: 1px dotted var(--rule);
+  transition: color 0.15s, border-color 0.15s;
+}
+.collab-root .author-papers a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.collab-root .author-papers .year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--ink-faint); margin-right: 6px;
+}
+
+.collab-root .panel-default { color: var(--ink-soft); font-size: 16px; line-height: 1.55; font-style: italic; }
+.collab-root .panel-default strong {
+  font-style: normal; color: var(--ink); display: block;
+  font-size: 18px; margin-bottom: 10px; font-weight: 600;
+}
+.collab-root .panel-stats {
+  margin-top: 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.14em;
+  color: var(--ink-faint); text-transform: uppercase;
+  font-style: normal; line-height: 1.9;
+}
+.collab-root .panel-stats .n { color: var(--ink); font-size: 14px; }
+
+.collab-root #tip {
+  position: absolute; pointer-events: none;
+  background: var(--ink); color: var(--paper);
+  padding: 6px 10px; font-size: 13px; line-height: 1.2;
+  border-radius: 2px; opacity: 0;
+  transform: translate(-50%, calc(-100% - 10px));
+  white-space: nowrap; transition: opacity 0.12s ease;
+  z-index: 10; box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
+.collab-root #tip::after {
+  content: ""; position: absolute; left: 50%; bottom: -4px;
+  transform: translateX(-50%) rotate(45deg);
+  width: 7px; height: 7px; background: var(--ink);
+}
+.collab-root #tip.show { opacity: 1; }
+
+/* Mini variant: trestles left column. Single column, panel hidden,
+   compact padding. Dots remain hoverable and clickable. The !important
+   markers override the wider full-page grid rule above. */
+.collab-mini .collab-grid,
+.collab-mini .collab-grid.page-columns,
+.collab-mini .collab-grid.page-full {
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+}
+.collab-mini .collab-grid > .map-wrap {
+  width: 100% !important;
+  grid-column: auto !important;
+}
+.collab-mini .collab-grid > aside.panel {
+  display: none !important;
+}
+.collab-mini .map-wrap {
+  padding: 8px;
+  box-shadow: inset 0 0 0 3px var(--paper-2), inset 0 0 0 4px var(--land-edge);
+}
+.collab-mini-caption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+  text-align: center;
+}
+.collab-mini-link {
+  display: block;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--ink-soft) !important;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.collab-mini-link:hover { color: var(--accent) !important; }
+
+/* Footnote line under the map on the dedicated Collaborators page */
+.collab-page-footnote {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-align: right;
+  margin: 16px 4px 0;
+  font-style: normal;
+}
