@@ -929,7 +929,17 @@ function drawDots() {
     showDefault();
   });
 
-  // Initial state: render the default (CSM) panel.
+  // Auto-pin from URL hash, e.g. landed here via "collaborators.html#inst=mit".
+  const hashMatch = window.location.hash.match(/inst=([\w-]+)/);
+  if (hashMatch) {
+    const requested = data.find(d => d.id === decodeURIComponent(hashMatch[1]));
+    if (requested) {
+      pinnedDot = requested;
+      g.selectAll("g.inst").classed("pinned", function(d) { return d.id === requested.id; });
+    }
+  }
+
+  // Initial state: render the pinned dot (if any) or the default (CSM).
   showDefault();
 }
 

@@ -1113,12 +1113,14 @@ function esc(s) {
   }[c]));
 }
 
-// Mini-map enhancement: clicking any dot navigates to publications.html.
-// Uses event delegation so it works after dots are drawn asynchronously.
+// Mini-map enhancement: clicking a dot opens the full Collaborators page
+// with that institution pre-pinned (via #inst=<id> hash).
 document.addEventListener("click", function(ev) {
-  if (ev.target && ev.target.closest && ev.target.closest(".collab-mini g.inst")) {
-    window.location.href = "publications.html";
-  }
+  if (!ev.target || !ev.target.closest) return;
+  const inst = ev.target.closest(".collab-mini g.inst");
+  if (!inst) return;
+  const id = inst.getAttribute("data-id");
+  window.location.href = "collaborators.html" + (id ? "#inst=" + encodeURIComponent(id) : "");
 });
 </script>
 
