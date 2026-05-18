@@ -513,8 +513,11 @@ function drawDots() {
   // Shown on initial load and whenever the cursor leaves a dot.
   const defaultDot = data.find(d => d.id === "csm");
   let resetPending = null;
+  let pinnedDot = null;
   function showDefault() {
-    if (defaultDot) renderPanel(defaultDot);
+    // Revert target: pinned dot if user clicked one, otherwise CSM.
+    const target = pinnedDot || defaultDot;
+    if (target) renderPanel(target);
     resetPending = null;
   }
 
@@ -753,7 +756,24 @@ function drawDots() {
       tip.classList.remove("show");
       svg.selectAll("g.inst").classed("active", false);
       resetPending = setTimeout(showDefault, 80);
+    })
+    .on("click", function(event, d) {
+      // Pin this institution: panel stays on it after mouseoff.
+      // Do not stopPropagation — the homepage mini-map relies on a
+      // document-level click delegate (navigates to publications.html).
+      pinnedDot = d;
+      g.selectAll("g.inst").classed("pinned", false);
+      d3.select(this).classed("pinned", true);
+      renderPanel(d);
     });
+
+  // Click on empty map background → unpin and revert to default.
+  svg.on("click.unpin", function(event) {
+    if (event.target.closest && event.target.closest("g.inst")) return;
+    pinnedDot = null;
+    g.selectAll("g.inst").classed("pinned", false);
+    showDefault();
+  });
 
   // Initial state: render the default (CSM) panel.
   showDefault();

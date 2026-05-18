@@ -139,6 +139,13 @@ hr {
 .collab-root g.inst:hover .dot { fill: var(--accent-2); r: 7; }
 .collab-root g.inst.active .dot-halo,
 .collab-root g.inst:hover .dot-halo { opacity: 1; }
+.collab-root g.inst.pinned .dot {
+  fill: var(--accent-2);
+  stroke: var(--ink);
+  stroke-width: 2;
+  r: 7;
+}
+.collab-root g.inst.pinned .dot-halo { opacity: 0.6; }
 
 .collab-root aside.panel {
   position: sticky; top: 24px;
