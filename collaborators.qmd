@@ -163,16 +163,16 @@ const COAUTHORS = [
              "ding2026c","pels2026c","pandey2025c","davis2025c","pels2025c","girard2024c1","girard2024c2","pandey2024c","shragge2024c","girard2021c","girard2017c","girard2016c","girard2015c",
              "netl2023final","netl2022prog"] },
   { name: "Daniel Davis",               inst: "csm",          confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Daniel+Davis+Colorado+Mines+geophysics",
+    scholar: "https://scholar.google.com/citations?user=xQ2FQlAAAAAJ&hl=en&oi=sra",
     papers: ["davis2026","davis2025c"] },
   { name: "Madeleine Pels",             inst: "csm",          confirmed: true,
     scholar: "https://scholar.google.com/scholar?q=Madeleine+Pels+Colorado+Mines+geophysics",
     papers: ["pels2026","pels2026c","pels2025c"] },
   { name: "Ashish Kumar",               inst: "csm",          confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Ashish+Kumar+Colorado+Mines+geophysics",
+    scholar: "https://scholar.google.com/citations?user=LmUA9ZkAAAAJ&hl=en&oi=sra",
     papers: ["pandey2026a","netl2023final"] },
   { name: "Can Oren",                   inst: "csm",          confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Can+Oren+Colorado+Mines",
+    scholar: "https://scholar.google.com/citations?user=WLpn1h0AAAAJ&hl=en&oi=ao",
     papers: ["shragge2024"] },
   { name: "Richard Krahenbuhl",         inst: "csm",          confirmed: true,
     scholar: "https://scholar.google.com/citations?user=a1WRuQgAAAAJ&hl=en",
@@ -184,13 +184,13 @@ const COAUTHORS = [
     scholar: "https://scholar.google.com/citations?user=ds33ncYAAAAJ&hl=en",
     papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
   { name: "Abdul Hafiz Saeed Issah",    inst: "csm",          confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Abdul+Hafiz+Saeed+Issah",
+    scholar: "https://scholar.google.com/citations?user=V2WpmiwAAAAJ&hl=en&oi=ao",
     papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
   { name: "Eileen R. Martin",           inst: "csm",          confirmed: true,
     scholar: "https://scholar.google.com/citations?user=GsLAKWEAAAAJ&hl=en",
     papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c","ore2023","titov2021"] },
   { name: "Donglin Zhu",                inst: "csm",          confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Donglin+Zhu+Colorado+Mines",
+    scholar: "https://scholar.google.com/citations?user=F-kEM1sAAAAJ&hl=en&oi=sra",
     papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
   { name: "Shihao Yuan",                inst: "csm",          confirmed: true,
     scholar: "https://scholar.google.com/scholar?q=Shihao+Yuan+Colorado+Mines",
@@ -211,7 +211,7 @@ const COAUTHORS = [
     scholar: "https://scholar.google.com/scholar?q=Yidan+Ding+Colorado+Mines+geophysics",
     papers: ["ding2026c"] },
   { name: "Jihyun Yang",                inst: "csm",          confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Jihyun+Yang+Colorado+Mines+geophysics",
+    scholar: "https://scholar.google.com/citations?user=2QewMq4AAAAJ&hl=en&oi=sra",
     papers: ["yang2023"] },
   { name: "Hanna Flamme",               inst: "csm",          confirmed: true,
     scholar: "https://scholar.google.com/scholar?q=Hanna+Flamme+Colorado+Mines",
@@ -241,12 +241,12 @@ const COAUTHORS = [
     scholar: "https://scholar.google.com/citations?user=OBeNaFsAAAAJ&hl=en",
     papers: ["chambers2024","pandey2023","tourei2024c","chambers2024c"] },
   { name: "M. Shawn Boltz",             inst: "niosh_smrd",   confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Shawn+Boltz+NIOSH+seismology",
+    scholar: "https://scholar.google.com/citations?user=fJg-pqAAAAAJ&hl=en&oi=sra",
     papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
 
   // ─── CU Boulder ──────────────────────────────────────────────────
   { name: "Manuel M. Mendoza",          inst: "cu_boulder",   confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Manuel+Mendoza+CIRES+Boulder+seismology",
+    scholar: "https://scholar.google.com/citations?user=HJ5A_14AAAAJ&hl=en&oi=sra",
     papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
 
   // ─── MIT ─────────────────────────────────────────────────────────
@@ -270,7 +270,7 @@ const COAUTHORS = [
     papers: ["chambers2024","martin2025c","tourei2024c","chambers2024c"] },
 
   // ─── Shell, The Hague ────────────────────────────────────────────
-  { name: "Mark Danilouchkine",         inst: "shell",        confirmed: true,
+  { name: "Mike Danilouchkine",         inst: "shell",        confirmed: true,
     scholar: "https://scholar.google.com/scholar?q=Danilouchkine+Shell+seismic",
     papers: ["girard2024","girard2024c2"] },
   { name: "Sijmen Gerritsen",           inst: "shell",        confirmed: true,
@@ -304,10 +304,10 @@ const COAUTHORS = [
 
   // ─── USGS CVO, Vancouver WA (Kramer + Denlinger per Kīlauea paper) ─
   { name: "Rebecca L. Kramer",          inst: "usgs_cvo",     confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Rebecca+Kramer+USGS+Cascades+seismology",
+    scholar: "https://www.linkedin.com/in/rebecca-kramer-49699574/",
     papers: ["kramer2026","roecker2025c"] },
   { name: "Roger Denlinger",            inst: "usgs_cvo",     confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Roger+Denlinger+USGS+Cascades",
+    scholar: "https://scholar.google.com/citations?user=aPe3ZvoAAAAJ&hl=en&oi=sra",
     papers: ["kramer2026","roecker2025c"] },
 
   // ─── USGS HVO, Hilo (Bennington + Flinders per Kīlauea paper) ────
@@ -320,7 +320,7 @@ const COAUTHORS = [
 
   // ─── U Wisconsin–Madison ─────────────────────────────────────────
   { name: "Claire Ruggles",             inst: "uw_madison",   confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Claire+Ruggles+Wisconsin+gravity+Kilauea",
+    scholar: "https://scholar.google.com/citations?user=JhmXcLUAAAAJ&hl=en&oi=sra",
     papers: ["roecker2025c"] },
 
   // ─── RPI, Troy NY ────────────────────────────────────────────────
@@ -348,7 +348,7 @@ const COAUTHORS = [
 
   // ─── UNSA Arequipa, Peru ─────────────────────────────────────────
   { name: "Edgard Gonzales",            inst: "unsa",         confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Edgard+Gonzales+UNSA+Arequipa+geophysics",
+    scholar: "https://scholar.google.com/citations?user=hwF5ddQAAAAJ&hl=en&oi=sra",
     papers: ["yang2023"] },
   { name: "Javier Ticona",              inst: "unsa",         confirmed: true,
     scholar: "https://scholar.google.com/scholar?q=Javier+Ticona+UNSA+Arequipa+geophysics",
@@ -380,7 +380,7 @@ const COAUTHORS = [
     scholar: "https://scholar.google.com/scholar?q=Richard+Hammack+NETL+geophysics",
     papers: ["netl2023final","netl2022prog"] },
   { name: "Dan Glaser",                 inst: "netl_pgh",     confirmed: true,
-    scholar: "https://scholar.google.com/scholar?q=Dan+Glaser+NETL+geophysics",
+    scholar: "https://scholar.google.com/citations?user=NBTLatUAAAAJ&hl=en&oi=sra",
     papers: ["netl2023final","netl2022prog"] },
 
   // ─── Shearwater GeoServices, Netherlands ─────────────────────────
