@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  pre-render: scripts/check_publications.py
+  render:
+    - "*.qmd"
 
 website:
   title: "Aaron J Girard"

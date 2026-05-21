@@ -19,6 +19,21 @@ a:hover {
   margin-top: 1.5rem;
 }
 
+/* Highlight the publication list item that the URL hash points at,
+   so users arriving from collaborators.html#pubid see which one. */
+.content li:has(> span[id]:target) {
+  background: #fff7cc;
+  border-left: 3px solid #d4a017;
+  padding-left: 8px;
+  border-radius: 2px;
+  animation: pub-target-fade 4s ease-out forwards;
+}
+@keyframes pub-target-fade {
+  0%   { background: #ffe97a; }
+  20%  { background: #fff2a8; }
+  100% { background: transparent; border-left-color: transparent; }
+}
+
 /* Teaching page styling */
 hr {
   border: 0;

@@ -980,7 +980,7 @@ function renderPanel(d) {
     sortedPapers.forEach(pid => {
       const p = PUBLICATIONS[pid];
       if (!p) return;
-      html += `<li><span class="year">${p.year}</span><a href="${PUBS_PAGE}" target="_top">${esc(p.label)}</a></li>`;
+      html += `<li><span class="year">${p.year}</span><a href="${PUBS_PAGE}#${pid}" target="_top">${esc(p.label)}</a></li>`;
     });
     html += `</ul>`;
     html += `</div>`;
