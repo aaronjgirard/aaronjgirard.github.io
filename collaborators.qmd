@@ -304,7 +304,7 @@ const COAUTHORS = [
 
   // ─── USGS CVO, Vancouver WA (Kramer + Denlinger per Kīlauea paper) ─
   { name: "Rebecca L. Kramer",          inst: "usgs_cvo",     confirmed: true,
-    scholar: "https://www.linkedin.com/in/rebecca-kramer-49699574/",
+    scholar: "https://www.usgs.gov/staff-profiles/rebecca-l-kramer",
     papers: ["kramer2026","roecker2025c"] },
   { name: "Roger Denlinger",            inst: "usgs_cvo",     confirmed: true,
     scholar: "https://scholar.google.com/citations?user=aPe3ZvoAAAAJ&hl=en&oi=sra",
