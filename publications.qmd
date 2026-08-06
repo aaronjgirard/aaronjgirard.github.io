@@ -48,6 +48,10 @@ toc-title: "Sections"
 
 ### 2026
 
+- []{#girard2026c1}\***Girard, A.J.**, D.R.H. O'Connell and J. Shragge (2026), "[Ambient-Noise Interferometry Across the Yakima Fold and Thrust Belt: Surface-Wave Modes and Shallow Velocity Heterogeneity](files/girard_traprock_agu2026.pdf)," *AGU Fall Meeting 2026*.
+
+- []{#wills2026c}^&dagger;^Wills, O., **A.J. Girard**, D.R.H. O'Connell and J. Shragge (2026), "[Moment Tensor Inversion of a Mw 3.5 Earthquake Preceding the June 7, 2023 Kīlauea Eruption](files/girard_mtuq_agu2026.pdf)," *AGU Fall Meeting 2026*.
+
 - []{#ding2026c}^&dagger;^Ding, Y., J. Shragge and **A.J. Girard** (2026), "[Ambient OBN Data Processing and Environmental-dependent Interferometric Analysis](files/ding_image2026.pdf)," *IMAGE, SEG Annual Meeting*, Houston, Texas.
 
 - []{#pels2026c}^&dagger;^Pels, M., J. Shragge and **A.J. Girard** (2026), "[3D Wave-Mode Separation for Elastic Time-Reverse Imaging](files/pels_image2026.pdf)," *IMAGE, SEG Annual Meeting*, Houston, Texas.
