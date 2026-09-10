@@ -165,7 +165,7 @@ const OFFSETS = {
 const PUBLICATIONS = {
   davis2026:        { year: 2026, label: "Interferometric frequency-domain gradiometry (GJI)" },
   pandey2026a:      { year: 2026, label: "Scholte-wave adjoint tomography (Geophysics, in review)" },
-  pels2026:         { year: 2026, label: "3-D elastic time-reverse imaging of a void anomaly (Geophysics, in review)" },
+  pels2026:         { year: 2026, label: "3-D elastic time-reverse imaging of a void anomaly (Geophysics)" },
   kramer2026:       { year: 2026, label: "Active/passive seismic imaging at K\u012blauea summit (SRL, in review)" },
   oconnell2026:     { year: 2026, label: "2023 K\u012blauea horizontal-component S/N assessment (Seismica)" },
   pandey2025a:      { year: 2025, label: "First-order control factors for OBN ambient interferometry (GJI)" },
