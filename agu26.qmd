@@ -12,7 +12,7 @@ resources:
   - files/agu26/*
 ---
 
-**Aaron J. Girard**^1^, Daniel R. H. O'Connell^2^ and Jeffrey Shragge^1^
+**Aaron J. Girard**^1^, Daniel R. H. O'Connell^2^ and Jeffrey Shragge^1^\
 ^1^Colorado School of Mines, ^2^Retired, Denver, CO
 
 AGU Fall Meeting 2026 · Session S026, Passive Seismic Monitoring of Spatiotemporal Earth Processes · Abstract 2097305
