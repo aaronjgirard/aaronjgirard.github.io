@@ -21,23 +21,23 @@ Thanks for scanning. Everything from the poster is here to take with you.
 
 [Download the poster (PDF, 31 MB)](files/agu26/Girard_AGU26_poster.pdf){.btn .btn-primary}
 
-[![The poster; tap to open full size](files/agu26/poster_web.jpg){fig-alt="AGU26 poster"}](files/agu26/poster_web.jpg)
+[![The poster; click to open full size](files/agu26/poster_web.jpg){fig-alt="AGU26 poster"}](files/agu26/poster_web.jpg)
 
 ## Wavefields in motion
 
-The poster shows four snapshots; here is the full lag sweep. Wavefields of the 20 central masters within 1 km of the array centroid (star), stacked by vector offset over LiDAR topography. Dashed circles expand at the measured crest speeds.
+Propagation movies of the still images from the poster. Wavefields of the 20 central masters within 1 km of the array centroid (star), stacked by vector offset with LiDAR topography displayed underneath. Dashed circles expand at the measured crest speeds.
 
 ```{=html}
 <video src="files/agu26/wavefield_anim.mp4" autoplay loop muted playsinline controls style="width: 100%; max-width: 820px;"></video>
 ```
 
-## In brief
+## Overview
 
-Storing carbon dioxide underground is one way to keep it out of the atmosphere. In south-central Washington, a thick stack of ancient lava flows is being studied as a possible storage site. Before anything can be stored there, we need to know what the rock looks like below the surface: how it is layered, how fast it is, and whether it changes from place to place.
+In south-central Washington, Project TrapRock is assessing the Columbia River Basalt Group beneath the Horse Heaven Hills as a site for permanent CO₂ storage. Injection there first requires knowing how the basalt is layered, how fast seismic waves travel through it, and how much those properties vary across the site.
 
-Instead of setting off explosions or using heavy equipment to make sound waves, we listened to the faint background hum that the Earth makes all the time, from ocean waves, wind, and human activity. We placed 144 small seismic recorders across a ridge and left them running for seven weeks. By comparing what any two recorders heard at the same moment, we can turn that random hum into a picture of waves traveling between them.
+We recorded the ambient seismic wavefield, the continuous background vibration from ocean waves, wind and human activity, on 144 three-component nodes across the ridge for seven weeks (Aug to Oct 2025). Cross-correlating the records of every node pair turns this background energy into virtual shot gathers: the waves one node would record if a source were placed at the other. No active source is required, so the full array of 144 virtual sources comes from passive recording alone.
 
-The waves behaved the way we expected for this kind of rock, and they show that the shallowest layers vary the most from place to place. These recordings give us a starting picture to compare against later, after carbon dioxide is injected.
+The gathers are dominated by Rayleigh and Love surface waves whose velocities increase with depth, and at least one higher-mode Rayleigh branch is visible. Their wavelengths of 0.5 to 3.5 km sample from about 70 m to 1 km depth. Energy leaking between the Rayleigh and Love components rises toward high frequency, which we interpret as lateral velocity heterogeneity concentrated in the shallow section. These observations form the pre-injection baseline for the planned time-lapse monitoring.
 
 ::: {.callout-note collapse="true" appearance="minimal"}
 ## Abstract
@@ -65,5 +65,3 @@ Aaron J. Girard, Center for Wave Phenomena, Colorado School of Mines
 ## Acknowledgments
 
 Project TrapRock is funded by the Washington Department of Commerce (Contract 24-92201-050) under the Climate Commitment Act. We thank Vantage Geophysical, the Horse Heaven Hills landowners for access, and the Marian and Edward Erdelyi Seismic Fund for the GTI nodes and tablets.
-
-*Updated 2026-11-03 22:39 MST*
