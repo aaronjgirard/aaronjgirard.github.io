@@ -2,6 +2,7 @@ project:
   type: website
   output-dir: docs
   pre-render: scripts/check_publications.py
+  post-render: scripts/hide_unlisted.py
   render:
     - "*.qmd"
 
