@@ -1,0 +1,64 @@
+---
+title: "The Earthquake Swarm at the Onset of the 7 June 2023 Kīlauea Eruption"
+subtitle: "Mechanisms of the M 3.3 Onset Earthquake and Its Neighbors"
+description-meta: "AGU26 poster, Wills, Girard, O'Connell and Shragge"
+unlisted: true
+search: false
+toc: false
+page-navigation: false
+include-in-header:
+  file: _agu26_kilaueaMTUQ_head.html
+resources:
+  - files/agu26_kilaueaMTUQ/*
+---
+
+**Olivia Wills**^1^, **Aaron J. Girard**^1^, Daniel R. H. O'Connell^2^ and Jeffrey Shragge^1^\
+^1^Colorado School of Mines, ^2^Retired, Denver, CO
+
+AGU Fall Meeting 2026 · Abstract 2093561
+
+[Download the poster (PDF, 3 MB; draft of 9 November 2026)](files/agu26_kilaueaMTUQ/Girard_AGU26_Kilauea_poster.pdf){.btn .btn-primary}
+
+[![The poster; click to open full size](files/agu26_kilaueaMTUQ/poster_web.jpg){fig-alt="AGU26 Kīlauea poster"}](files/agu26_kilaueaMTUQ/poster_web.jpg)
+
+## The swarm in motion
+
+The relocated earthquakes of 7 June 2023 in the ambient-noise S-wave velocity volume under the summit, one minute of swarm per frame, from 00:32 UTC to midnight. Dots are sized by moment magnitude and colored by time; open circles are approximate locations; the June 2023 vents are the orange square. The eruption begins at about 14:44 UTC, right after the M 3.3.
+
+```{=html}
+<video src="files/agu26_kilaueaMTUQ/swarm_mw.mp4" autoplay loop muted playsinline controls style="width: 100%; max-width: 820px;"></video>
+```
+
+The same movie with the 13 earthquakes that have a 3D moment tensor drawn as beachball spheres: the filled part is where the first motion pushed outward, in the color of the time.
+
+```{=html}
+<video src="files/agu26_kilaueaMTUQ/swarm_beachballs.mp4" autoplay loop muted playsinline controls style="width: 100%; max-width: 820px;"></video>
+```
+
+The seven hours before the onset earthquake within 3 km of the caldera source, a sliding one-hour window: map, sections along and across the N52E trend of the cluster, and position against time.
+
+```{=html}
+<video src="files/agu26_kilaueaMTUQ/preonset_window.mp4" autoplay loop muted playsinline controls style="width: 100%; max-width: 820px;"></video>
+```
+
+[![The seven hours before the onset earthquake; click to open full size](files/agu26_kilaueaMTUQ/preonset_views.png){fig-alt="Pre-onset views"}](files/agu26_kilaueaMTUQ/preonset_views.png)
+
+## Overview
+
+*To come.*
+
+## Papers
+
+- **O'Connell, D. R. H., A. J. Girard, et al.** (in prep.), Velocity modeling at Kīlauea 2023 Part I: Vp from active-source tri-axial vibroseis.
+- **Girard, A. J., D. R. H. O'Connell, J. Shragge, et al.** (in prep.), Velocity modeling at Kīlauea 2023 Part II: Low-frequency Vs from tomography, eikonal tomography, HVSR and earthquake relocation.
+- Thurin, J., et al. (2025), [MTUQ: moment tensor uncertainty quantification](https://github.com/mtuqorg/mtuq).
+- Tape, W. and C. Tape (2012), [A geometric setting for moment tensors](https://doi.org/10.1111/j.1365-246X.2012.05491.x), *Geophysical Journal International*, 190, 476–498.
+
+## Contact
+
+Aaron J. Girard, Center for Wave Phenomena, Colorado School of Mines
+[agirard@mines.edu](mailto:agirard@mines.edu) · [aaronjgirard.github.io](index.qmd) · [LinkedIn](https://www.linkedin.com/in/aarongirard/)
+
+## Acknowledgments
+
+Nodes from GTI, PASSCAL and the Hawaiian Volcano Observatory; HV broadband data via EarthScope; computing on Wendian (Colorado School of Mines) and gpu2.
