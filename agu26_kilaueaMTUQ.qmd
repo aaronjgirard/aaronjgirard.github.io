@@ -47,6 +47,16 @@ The seven hours before the onset earthquake within 3 km of the caldera source, a
 
 *To come.*
 
+::: {.callout-note collapse="true" appearance="minimal"}
+## Abstract, as accepted
+
+**Moment Tensor Analysis of an Mw 3.5 Earthquake Preceding the June 7, 2023 Kīlauea Eruption**
+
+*The abstract was written before the relocation and the 3D inversions; the onset earthquake is M 3.3 in the USGS catalog, and the poster uses that magnitude.*
+
+Moment tensor inversions have previously been used to classify earthquakes at Kīlauea Volcano, Hawaiʻi, but sparse coverage of permanent Hawaiian Volcano Observatory (HVO) stations has limited the resolution of source type and geometry. Here, we take advantage of a dense, temporary seismic array of more than 1800-nodes deployed across the Kīlauea summit region as part of the Kīlauea Seismic Imaging Project to characterize an Mw 3.5 earthquake immediately preceding the June 7, 2023, eruption, an event of particular interest for its potential relationship to pre-eruptive processes. We use the open-source software MTUQ to perform a full moment tensor grid search over source geometry, magnitude, and depth, fitting body-wave-windowed, bandpass-filtered (0.25–2.0 Hz) waveforms from the dense nodal array to 1D Green's functions. The Green's functions are computed for a Kīlauea summit velocity model derived from co-located vibroseis active-source data, with a depth-dependent Vp/Vs ratio and densities from previous studies. Preliminary results indicate a significant non-double-couple component in the best-fitting solution, consistent with an isotropic or compensated linear vector dipole (CLVD) contribution beyond simple shear faulting that may be linked to fluid or gas movement in the shallow summit reservoir preceding eruption. The resolved source type is sensitive to waveform windowing and station subset, underscoring the importance of dense azimuthal coverage and systematic robustness testing for reliably distinguishing genuine source characteristics from processing-dependent artifacts. This work shows that dense nodal arrays paired with open-source tools such as MTUQ enable robustness testing not possible with sparse station coverage alone, providing a template for quantifying source mechanisms and uncertainty in future volcanic seismic monitoring efforts.
+:::
+
 ## Papers
 
 - **O'Connell, D. R. H., A. J. Girard, et al.** (in prep.), Velocity modeling at Kīlauea 2023 Part I: Vp from active-source tri-axial vibroseis.
