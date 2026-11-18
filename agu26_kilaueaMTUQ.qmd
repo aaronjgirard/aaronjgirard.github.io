@@ -57,12 +57,18 @@ The seven hours before the onset earthquake within 3 km of the caldera source, a
 Moment tensor inversions have previously been used to classify earthquakes at Kīlauea Volcano, Hawaiʻi, but sparse coverage of permanent Hawaiian Volcano Observatory (HVO) stations has limited the resolution of source type and geometry. Here, we take advantage of a dense, temporary seismic array of more than 1800-nodes deployed across the Kīlauea summit region as part of the Kīlauea Seismic Imaging Project to characterize an Mw 3.5 earthquake immediately preceding the June 7, 2023, eruption, an event of particular interest for its potential relationship to pre-eruptive processes. We use the open-source software MTUQ to perform a full moment tensor grid search over source geometry, magnitude, and depth, fitting body-wave-windowed, bandpass-filtered (0.25–2.0 Hz) waveforms from the dense nodal array to 1D Green's functions. The Green's functions are computed for a Kīlauea summit velocity model derived from co-located vibroseis active-source data, with a depth-dependent Vp/Vs ratio and densities from previous studies. Preliminary results indicate a significant non-double-couple component in the best-fitting solution, consistent with an isotropic or compensated linear vector dipole (CLVD) contribution beyond simple shear faulting that may be linked to fluid or gas movement in the shallow summit reservoir preceding eruption. The resolved source type is sensitive to waveform windowing and station subset, underscoring the importance of dense azimuthal coverage and systematic robustness testing for reliably distinguishing genuine source characteristics from processing-dependent artifacts. This work shows that dense nodal arrays paired with open-source tools such as MTUQ enable robustness testing not possible with sparse station coverage alone, providing a template for quantifying source mechanisms and uncertainty in future volcanic seismic monitoring efforts.
 :::
 
-## Papers
+## References
 
-- **O'Connell, D. R. H., A. J. Girard, et al.** (in prep.), Velocity modeling at Kīlauea 2023 Part I: Vp from active-source tri-axial vibroseis.
-- **Girard, A. J., D. R. H. O'Connell, J. Shragge, et al.** (in prep.), Velocity modeling at Kīlauea 2023 Part II: Low-frequency Vs from tomography, eikonal tomography, HVSR and earthquake relocation.
-- Thurin, J., et al. (2025), [MTUQ: moment tensor uncertainty quantification](https://github.com/mtuqorg/mtuq).
-- Tape, W. and C. Tape (2012), [A geometric setting for moment tensors](https://doi.org/10.1111/j.1365-246X.2012.05491.x), *Geophysical Journal International*, 190, 476–498.
+Numbered as on the poster.
+
+1. **O'Connell, D. R. H., A. J. Girard, et al.** (in preparation), Velocity modeling at Kīlauea 2023, Part I: Vp from active-source tri-axial vibroseis.
+2. **Girard, A. J., D. R. H. O'Connell, J. Shragge, et al.** (in preparation), Velocity modeling at Kīlauea 2023, Part II: Low-frequency Vs from tomography, eikonal tomography, HVSR and earthquake relocation.
+3. Komatitsch, D. and J. Tromp (2002), [Spectral-element simulations of global seismic wave propagation, I. Validation](https://doi.org/10.1046/j.1365-246X.2002.01653.x), *Geophysical Journal International*, 149, 390–412.
+4. Thurin, J., R. Modrak, C. Tape, A. M. McPherson, F. R. Rodríguez-Cardozo, J. Kintner, L. Ding, Q. Liu and J. Braunmiller (2025), [MTUQ: a framework for estimating moment tensors, point forces, and their uncertainties](https://doi.org/10.1093/gji/ggaf080), *Geophysical Journal International*, 241, 1373–1390 ([code](https://github.com/mtuqorg/mtuq)).
+5. Tape, W. and C. Tape (2012), [A geometric setting for moment tensors](https://doi.org/10.1111/j.1365-246X.2012.05491.x), *Geophysical Journal International*, 190, 476–498.
+6. Mulliken, K. M., J. P. Kauahikaua, D. A. Swanson and M. K. Zoeller (2024), [Chronology of recent volcanic activity on the Island of Hawaiʻi, Hawaii (ver. 1.0, January 2024)](https://doi.org/10.5066/P9V3NQYB), U.S. Geological Survey data release.
+7. Roecker, S., R. P. Denlinger and D. R. H. O'Connell (2026), [Seismic catalogue derived from the 2023 Kīlauea Seismic Imaging Experiment, Kīlauea, Hawaiʻi, USA](https://doi.org/10.5066/P1WQ3UHP), U.S. Geological Survey data release.
+8. **Kramer, R. L., R. Denlinger, A. J. Girard, D. R. H. O'Connell, G. Lin, S. Roecker, N. Bennington, A. Flinders and E. Vinarski** (2026), A high-density, active and passive seismic imaging experiment at the summit of Kīlauea Volcano, Hawaiʻi, *Seismological Research Letters*, in review (link will appear here once accepted).
 
 ## Contact
 
