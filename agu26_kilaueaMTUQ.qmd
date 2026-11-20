@@ -17,7 +17,7 @@ resources:
 
 AGU Fall Meeting 2026 · Abstract 2093561
 
-[Download the poster (PDF, 6 MB; version of 18 November 2026)](files/agu26_kilaueaMTUQ/Girard_AGU26_Kilauea_poster.pdf){.btn .btn-primary}
+[Download the poster (PDF, 9 MB; version of 19 November 2026)](files/agu26_kilaueaMTUQ/Girard_AGU26_Kilauea_poster.pdf){.btn .btn-primary}
 
 [![The poster; click to open full size](files/agu26_kilaueaMTUQ/poster_web.jpg){fig-alt="AGU26 Kīlauea poster"}](files/agu26_kilaueaMTUQ/poster_web.jpg)
 
@@ -63,12 +63,9 @@ Numbered as on the poster.
 
 1. **O'Connell, D. R. H., A. J. Girard, et al.** (in preparation), Velocity modeling at Kīlauea 2023, Part I: Vp from active-source tri-axial vibroseis.
 2. **Girard, A. J., D. R. H. O'Connell, J. Shragge, et al.** (in preparation), Velocity modeling at Kīlauea 2023, Part II: Low-frequency Vs from tomography, eikonal tomography, HVSR and earthquake relocation.
-3. Komatitsch, D. and J. Tromp (2002), [Spectral-element simulations of global seismic wave propagation, I. Validation](https://doi.org/10.1046/j.1365-246X.2002.01653.x), *Geophysical Journal International*, 149, 390–412.
-4. Thurin, J., R. Modrak, C. Tape, A. M. McPherson, F. R. Rodríguez-Cardozo, J. Kintner, L. Ding, Q. Liu and J. Braunmiller (2025), [MTUQ: a framework for estimating moment tensors, point forces, and their uncertainties](https://doi.org/10.1093/gji/ggaf080), *Geophysical Journal International*, 241, 1373–1390 ([code](https://github.com/mtuqorg/mtuq)).
-5. Tape, W. and C. Tape (2012), [A geometric setting for moment tensors](https://doi.org/10.1111/j.1365-246X.2012.05491.x), *Geophysical Journal International*, 190, 476–498.
-6. Mulliken, K. M., J. P. Kauahikaua, D. A. Swanson and M. K. Zoeller (2024), [Chronology of recent volcanic activity on the Island of Hawaiʻi, Hawaii (ver. 1.0, January 2024)](https://doi.org/10.5066/P9V3NQYB), U.S. Geological Survey data release.
-7. Roecker, S., R. P. Denlinger and D. R. H. O'Connell (2026), [Seismic catalogue derived from the 2023 Kīlauea Seismic Imaging Experiment, Kīlauea, Hawaiʻi, USA](https://doi.org/10.5066/P1WQ3UHP), U.S. Geological Survey data release.
-8. **Kramer, R. L., R. Denlinger, A. J. Girard, D. R. H. O'Connell, G. Lin, S. Roecker, N. Bennington, A. Flinders and E. Vinarski** (2026), A high-density, active and passive seismic imaging experiment at the summit of Kīlauea Volcano, Hawaiʻi, *Seismological Research Letters*, in review (link will appear here once accepted).
+3. Thurin, J., R. Modrak, C. Tape, A. M. McPherson, F. R. Rodríguez-Cardozo, J. Kintner, L. Ding, Q. Liu and J. Braunmiller (2025), [MTUQ: a framework for estimating moment tensors, point forces, and their uncertainties](https://doi.org/10.1093/gji/ggaf080), *Geophysical Journal International*, 241, 1373–1390 ([code](https://github.com/mtuqorg/mtuq)).
+4. Roecker, S., R. P. Denlinger and D. R. H. O'Connell (2026), [Seismic catalogue derived from the 2023 Kīlauea Seismic Imaging Experiment, Kīlauea, Hawaiʻi, USA](https://doi.org/10.5066/P1WQ3UHP), U.S. Geological Survey data release.
+5. **Kramer, R. L., R. Denlinger, A. J. Girard, D. R. H. O'Connell, G. Lin, S. Roecker, N. Bennington, A. Flinders and E. Vinarski** (2026), A high-density, active and passive seismic imaging experiment at the summit of Kīlauea Volcano, Hawaiʻi, *Seismological Research Letters*, in review (link will appear here once accepted).
 
 ## Contact
 
